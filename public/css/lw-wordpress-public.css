@@ -1,0 +1,31 @@
+/* bootstrap overrides */
+.lw-aff .breadcrumb
+{
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    font-weight: 500 !important;
+}
+
+.lw-aff .card {
+    padding: 0;
+}
+.lw-aff h4.card-title{
+    margin-bottom: 0;
+}
+
+.lw-aff label {
+    font-weight: 500 !important;
+}
+
+.lw-aff .custom-control-label {
+    font-weight: 400 !important;
+}
+
+.lw-aff select
+{
+    max-width: initial;
+}
+
+.lw-aff li.nav-item:before {
+    background: none !important;
+}
