@@ -33,7 +33,7 @@ class LwWordpress
     protected static $instance = null;
 
     protected function __construct(){
-        $this->version = lw_aff_VERSION;
+        $this->version = lw_wordpress_VERSION;
         $this->loadDependencies();
 
         if (is_admin()) {
@@ -77,7 +77,12 @@ class LwWordpress
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-ajax-action.php'),
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-settings.php'),
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-create-page-action.php'),
-	        LwWordpress::pluginDir('includes/class-lw-api-action.php'),
+	        LwWordpress::pluginDir('includes/class-lw-wordpress-api-action.php'),
+	        LwWordpress::pluginDir('includes/class-lw-wordpress-cron.php'),
+	        LwWordpress::pluginDir('includes/cron/class-lw-wordpress-api-cron.php'),
+
+	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-imprint-shortcode.php'),
+	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-privacy-policy-shortcode.php'),
 
 	        LwWordpress::pluginDir('public/class-lw-wordpress-public.php'),
 
@@ -109,15 +114,10 @@ class LwWordpress
         $this->loader->add_action('admin_enqueue_scripts', $admin, 'enqueue_scripts');
 
         $this->loader->add_action('admin_menu', $admin, 'menuItem');
+	    $this->loader->add_action('admin_notices', $admin, 'showAdminNotices');
 
 	    $this->loader->add_action('current_screen', $admin, 'doSystemCheck');
 
-        /*
-	    $this->loader->add_action( 'show_user_profile', LwWordpresssUserManager::getInstance(), 'addWordpressFields' );
-	    $this->loader->add_action( 'edit_user_profile', LwWordpresssUserManager::getInstance(), 'addWordpressFields' );
-	    $this->loader->add_action( 'personal_options_update', LwWordpresssUserManager::getInstance(), 'saveWordpressFields' );
-	    $this->loader->add_action( 'edit_user_profile_update', LwWordpresssUserManager::getInstance(), 'saveWordpressFields' );
-        */
     }
 
     private function definePublicHooks()
@@ -125,26 +125,12 @@ class LwWordpress
         $public = new LwWordpressPublic();
         $this->loader->add_action( 'wp_enqueue_scripts', $public, 'enqueue_styles');
         $this->loader->add_action( 'wp_enqueue_scripts', $public, 'enqueue_scripts');
-	    //$this->loader->add_action( 'init',               $public, 'startBuffer' ) ;
 
-	    if (LwWordpressSettings::get('wordpress_enabled') == "1") {
-		    //$this->loader->add_action( 'woocommerce_checkout_update_order_meta', LwWordpressOrderApi::getInstance(), 'setCookieInOrder' );
-		    $this->loader->add_action( 'woocommerce_checkout_update_order_meta', LwWordpressOrderApi::getInstance(), 'setCookieInOrder', 10, 1 );
-		    $this->loader->add_action( 'wp_head', $public, 'checkRefIdAndStoreData' );
+	    $this->loader->add_action('wp_footer', $public, 'writeFooterScripts', 1000);
+	    $this->loader->add_action('wp_head', $public, 'writeHeaderScripts');
+	    $this->loader->add_action('wp_body_open', $public, 'writeBodyStartScripts');
 
-		    // registering hooks for account creations
-		    $this->loader->add_action( 'woocommerce_register_form' , $public, 'wordpressRegisterFormAfterRegisterForm' ) ;
-		    $this->loader->add_filter( 'woocommerce_registration_errors' , $public,  'wordpressRegisterFormValidateForm'  , 10 , 3 ) ;
-		    //$this->loader->add_filter( 'registration_errors' , $public,  'wordpressRegisterFormValidateForm'  , 10 , 3 ) ;
-		    $this->loader->add_action( 'woocommerce_created_customer' , $public, 'wordpressRegisterFormAfterInsert'  , 10 , 3 ) ;
-
-		    //Insert the new endpoint into the My Account menu
-		    $this->loader->add_filter( 'query_vars', $public, 'addWordpressQueryVar', 0 );
-		    $this->loader->add_filter( 'woocommerce_account_menu_items', $public, 'addWordpressMenuItem' );
-		    // Note: add_action must follow 'woocommerce_account_{your-endpoint-slug}_endpoint' format
-		    $this->loader->add_action( 'woocommerce_account_wordpressaccount_endpoint', $public, 'wooWordpressAccountEndpointAction' );
-
-	    }
+	    $this->loader->add_action( 'rest_api_init',$public , 'registerLwCallbackEndpoint');
     }
 
     /**

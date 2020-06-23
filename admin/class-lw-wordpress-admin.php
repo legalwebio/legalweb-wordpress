@@ -79,8 +79,8 @@ class LwWordpressAdmin
      * @since    1.0.0
      */
     public function enqueue_styles(){
-        wp_enqueue_style(lw_aff_NAME.'-bootstrap', plugin_dir_url(__FILE__). 'css/bootstrap.min.css', array(), lw_aff_VERSION, 'all' );
-        wp_enqueue_style(lw_aff_NAME, plugin_dir_url(__FILE__). 'css/lw-wordpress-admin.css', array(), lw_aff_VERSION, 'all' );
+        wp_enqueue_style(lw_wordpress_NAME.'-bootstrap', plugin_dir_url(__FILE__). 'css/bootstrap.min.css', array(), lw_wordpress_VERSION, 'all' );
+        wp_enqueue_style(lw_wordpress_NAME, plugin_dir_url(__FILE__). 'css/lw-wordpress-admin.css', array(), lw_wordpress_VERSION, 'all' );
     }
 
     /**
@@ -90,8 +90,8 @@ class LwWordpressAdmin
      */
     public function enqueue_scripts(){
 
-        wp_enqueue_script(lw_aff_NAME, plugin_dir_url(__FILE__). 'js/lw-wordpress-admin.js', array('jquery'), lw_aff_VERSION, false );
-        wp_enqueue_script(lw_aff_NAME.'-bootstrap', plugin_dir_url(__FILE__). 'js/bootstrap.min.js', array('jquery'), lw_aff_VERSION, false );
+        wp_enqueue_script(lw_wordpress_NAME, plugin_dir_url(__FILE__). 'js/lw-wordpress-admin.js', array('jquery'), lw_wordpress_VERSION, false );
+        wp_enqueue_script(lw_wordpress_NAME.'-bootstrap', plugin_dir_url(__FILE__). 'js/bootstrap.min.js', array('jquery'), lw_wordpress_VERSION, false );
 
     }
 
@@ -108,4 +108,27 @@ class LwWordpressAdmin
 	    }
 	    */
     }
+
+	function showAdminNotices() {
+
+		$locale = LwWordpressLanguageTools::getInstance()->getCurrentLanguageCode();
+		$locale = substr( $locale, 0, 2 );
+
+		$apiData = (new LwWordpressApiAction())->getOrLoadApiData();
+
+		try {
+			if ( $apiData != null &&
+			     $apiData->notices != null &&
+			     $apiData->notices->notice != null &&
+			     $apiData->notices->notice->{$locale} != null ) {
+
+
+
+			}
+		} catch (Exception  $e)
+		{
+
+		}
+	}
+
 }

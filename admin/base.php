@@ -22,7 +22,7 @@
                 $tabs[$tab]->page();
                 ?>
                 <script>
-                    var lwAffActiveAdminSubmenu = '<?= $tabs[$tab]->slug ?>';
+                    var lwWordpressActiveAdminSubmenu = '<?= $tabs[$tab]->slug ?>';
 
                 </script>
                 <?php

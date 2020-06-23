@@ -1,4 +1,4 @@
-=== LW Wordpress ===
+=== LegalWeb Cloud ===
 Contributors: legalweb
 Donate link: https://legalweb.io
 Tags: wordpress

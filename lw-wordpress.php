@@ -4,9 +4,9 @@
  *
  * @link              https://www.legalweb.io
  * @since             1.0.0
- * @package           Lw Wordpress
+ * @package           LegalWeb Cloud
  *
- * Plugin Name:   LegalWeb Wordpress
+ * Plugin Name:   LegalWeb Cloud
  * Plugin URI:    https://www.legalweb.io
  * Description:   Wordpress Plugin for DSGVO, Imprint & Pricacy Policy of legalweb.io
  * Version:       1.0.0
@@ -16,11 +16,11 @@
  * Text Domain:   lw-wordpress
 */
 
-define('lw_aff_VERSION', '1.0.0');
-define('lw_aff_NAME', 'lw-wordpress');
-define('lw_aff_PLUGIN_NAME', 'lw-wordpress');
-define('lw_aff_URL', plugin_dir_url( __FILE__ ));
-define('lw_aff_PATH', plugin_dir_path( __FILE__ ));
+define('lw_wordpress_VERSION', '1.0.0');
+define('lw_wordpress_NAME', 'lw-wordpress');
+define('lw_wordpress_PLUGIN_NAME', 'lw-wordpress');
+define('lw_wordpress_URL', plugin_dir_url( __FILE__ ));
+define('lw_wordpress_PATH', plugin_dir_path( __FILE__ ));
 
 /**
  * The core plugin class that is used to define internationalization,

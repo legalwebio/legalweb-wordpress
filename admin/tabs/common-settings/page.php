@@ -63,12 +63,12 @@
                 </div>
                 <div class="form-group">
 					<?php if ( $privacyPolicyPage == '0' ): ?>
-                        <small><?php _e( 'Create a page that uses the shortcode <code>[privacy_policy]</code>.', 'lw-wordpress' ) ?>
+                        <small><?php _e( 'Create a page that uses the shortcode <code>[lw-privacypolicy]</code>.', 'lw-wordpress' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= LwWordpressCreatePageAction::url( array( 'privacy_policy_page' => '1' ) ) ?>"><?php _e( 'Create page', 'lw-wordpress' ) ?></a>
                         </small>
-					<?php elseif ( ! lwPageContainsString( $privacyPolicyPage, 'privacy_policy' ) ): ?>
-                        <small><?php _e( 'Attention: The shortcode <code>[privacy_policy]</code> was not found on the page you selected.', 'lw-wordpress' ) ?>
+					<?php elseif ( ! lwPageContainsString( $privacyPolicyPage, 'lw-privacypolicy' ) ): ?>
+                        <small><?php _e( 'Attention: The shortcode <code>[lw-privacypolicy]</code> was not found on the page you selected.', 'lw-wordpress' ) ?>
                             <a class="btn btn-secondary btn-block" target="_blank"
                                href="<?= get_edit_post_link( $privacyPolicyPage ) ?>"><?php _e( 'Edit page', 'lw-wordpress' ) ?></a>
                         </small>
@@ -111,12 +111,12 @@
                 </div>
                 <div class="form-group">
 					<?php if ( $imprintPage == '0' ): ?>
-                        <small><?php _e( 'Create a page that uses the shortcode <code>[imprint]</code>.', 'lw-wordpress' ) ?>
+                        <small><?php _e( 'Create a page that uses the shortcode <code>[lw-imprint]</code>.', 'lw-wordpress' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= LwWordpressCreatePageAction::url( array( 'imprint_page' => '1' ) ) ?>"><?php _e( 'Create page', 'lw-wordpress' ) ?></a>
                         </small>
-					<?php elseif ( ! lwPageContainsString( $imprintPage, 'imprint' ) ): ?>
-                        <small><?php _e( 'Attention: The shortcode <code>[imprint]</code> was not found on the page you selected.', 'lw-wordpress' ) ?>
+					<?php elseif ( ! lwPageContainsString( $imprintPage, 'lw-imprint' ) ): ?>
+                        <small><?php _e( 'Attention: The shortcode <code>[lw-imprint]</code> was not found on the page you selected.', 'lw-wordpress' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= get_edit_post_link( $imprintPage ) ?>"><?php _e( 'Edit page', 'lw-wordpress' ) ?></a>
                         </small>
@@ -139,14 +139,32 @@
 
         <div class="card-body">
 
-            <form method="post" action="<?= admin_url( '/admin-ajax.php' ); ?>" style="display: inline">
-                <div class="form-group">
-                    <input type="hidden" name="action"
-                           value="<?= LwApiAction::getActionName() ?>">
-                    <input type="submit" class="btn btn-secondary btn-block"
-                           value="<?= __( 'Refresh api', 'lw-wordpress' ) ?>"/>
+
+
+                <div class="form-row">
+                    <div class="col">
+                        <label for="textsVersion"><?= __('Version','lw-wordpress');?></label>
+                        <input type="text" readonly="" class="form-control-plaintext pb-0" id="textVersion" value="<?= LwWordpressSettings::get('api_data_version')?>">
+                    </div>
+                    <div class="col">
+                        <label for="textsVersion"><?= __('Date of Version','lw-wordpress');?></label>
+                        <input type="text" readonly="" class="form-control-plaintext pb-0" id="textVersion" value="<?= date("d.m.y H:i", strtotime(LwWordpressSettings::get('api_data_date')))?>">
+                    </div>
+
+                    <div class="col">
+                        <label for="textsVersion"><?= __('Last update check','lw-wordpress');?></label>
+                        <input type="text" readonly="" class="form-control-plaintext" id="textVersion" value="<?= date("d.m.y H:i",strtotime(LwWordpressSettings::get('api_data_last_refresh_date')))?>">
+                    </div>
                 </div>
-            </form>
+                <div class="form-group">
+                    <form method="post" action="<?= admin_url( '/admin-ajax.php' ); ?>" style="display: inline">
+                        <input type="hidden" name="action"
+                               value="<?= LwWordpressApiAction::getActionName() ?>">
+                        <input type="submit" class="btn btn-secondary btn-block"
+                               value="<?= __( 'Refresh API Data', 'lw-wordpress' ) ?>"/>
+                    </form>
+                </div>
+
         </div>
 
     </div>

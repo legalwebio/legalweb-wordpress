@@ -42,7 +42,11 @@ class LwWordpressSettings{
         'auto_update'                       => '0',
         'privacy_policy_page'               => '0',
 	    'imprint_page'                      => '0',
-
+		'api_data'                          => '',
+        'api_data_version'                  => '0',
+	    'api_data_date'                     => date('D M d, Y G:i', 0),
+        'api_data_last_refresh_date'        => date('D M d, Y G:i', 0),
+	    'api_data_guid'                     => '',
 	);
 
 
