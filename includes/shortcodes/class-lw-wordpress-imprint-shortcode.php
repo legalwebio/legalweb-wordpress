@@ -16,9 +16,9 @@ function LwWordpressImprintShortcode($atts){
 
    try {
 	   if ( $apiData == null ||
-	        $apiData->services == null ||
-	        $apiData->services->imprint == null ||
-	        $apiData->services->imprint->{$locale} == null ) {
+	        isset($apiData->services) == false ||
+	        isset($apiData->services->imprint) == false ||
+	        isset($apiData->services->imprint->{$locale}) == false ) {
 		   return __( 'The imprint for the selected language ' . $locale . ' could not be found.', 'lw-wordpress' );
 	   }
 

@@ -4,13 +4,13 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-2 text-white">
         <a class="navbar-brand" href="#">
             <img src="<?php echo LwWordpress::pluginURI('public\images\legalwebio-logo-icon-white.svg'); ?>" width="30" height="30" class="d-inline-block align-top" alt="">
-            <a class="navbar-brand"><?php _e('LW Wordpress by legalweb.io', 'lw-wordpress'); ?></a>
+            <a class="navbar-brand"><?php _e('LegalWeb Cloud by legalweb.io', 'lw-wordpress'); ?></a>
         </a>
     </nav>
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><?php _e('LW Wordpress', 'lw-wordpress'); ?></a></li>
+            <li class="breadcrumb-item"><a href="#"><?php _e('Legalweb Cloud', 'lw-wordpress'); ?></a></li>
             <li class="breadcrumb-item active" aria-current="page"><?= __($tabs[$tab]->getTabTitle(),'lw-wordpress');;?></li>
         </ol>
     </nav>

@@ -27,7 +27,7 @@ class LwWordpressAdmin
 
 
             $svg = 'data:image/svg+xml;base64,'. base64_encode(file_get_contents(LwWordpress::pluginDir('public/images/legalwebio-logo-icon-white.svg')));
-            add_menu_page('LegalWeb Wordpress', 'LegalWeb Wordpress',  'manage_options', 'lw-wordpress', array($this, 'adminPage'), $svg, null);
+            add_menu_page('LegalWeb Cloud', 'LegalWeb Cloud',  'manage_options', 'lw-wordpress', array($this, 'adminPage'), $svg, null);
 
             add_submenu_page($menu_slug, __('Common','lw-wordpress'), __('Common','lw-wordpress'),  'manage_options', 'lw-wordpress', array($this, 'adminPage'));
 
@@ -93,6 +93,11 @@ class LwWordpressAdmin
         wp_enqueue_script(lw_wordpress_NAME, plugin_dir_url(__FILE__). 'js/lw-wordpress-admin.js', array('jquery'), lw_wordpress_VERSION, false );
         wp_enqueue_script(lw_wordpress_NAME.'-bootstrap', plugin_dir_url(__FILE__). 'js/bootstrap.min.js', array('jquery'), lw_wordpress_VERSION, false );
 
+	    $generalConfig = [
+		    'ajaxUrl' => admin_url('admin-ajax.php')
+	    ];
+
+	    wp_localize_script(lw_wordpress_NAME, 'args', $generalConfig);
     }
 
     public function doSystemCheck()
@@ -118,11 +123,23 @@ class LwWordpressAdmin
 
 		try {
 			if ( $apiData != null &&
-			     $apiData->notices != null &&
-			     $apiData->notices->notice != null &&
-			     $apiData->notices->notice->{$locale} != null ) {
+			     isset($apiData->messages) &&
+			     count($apiData->messages) > 0) {
 
+				$dismissedApiMessages = LwWordpressSettings::get('dismissed_api_message_ids');
+				if (is_array($dismissedApiMessages) == false) $dismissedApiMessages = [];
 
+				//$allMessages = json_decode(json_encode( $apiData->services->$apiData->notices->messages), true);
+				foreach ($apiData->messages as $key => $messageItem) {
+
+					if (in_array($messageItem->id, $dismissedApiMessages) == false)
+					{
+						$class = 'notice notice-warning is-dismissible lw-wordpress-admin-message lw-wordpress-admin-message'.$messageItem->id;
+						$message = $messageItem->msg;
+
+						printf( '<div class="%1$s" data-msgId="'.$messageItem->id.'"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
+					}
+				}
 
 			}
 		} catch (Exception  $e)

@@ -78,11 +78,17 @@ class LwWordpress
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-settings.php'),
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-create-page-action.php'),
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-api-action.php'),
+	        LwWordpress::pluginDir('includes/class-lw-wordpress-notice-action.php'),
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-cron.php'),
 	        LwWordpress::pluginDir('includes/cron/class-lw-wordpress-api-cron.php'),
 
 	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-imprint-shortcode.php'),
 	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-privacy-policy-shortcode.php'),
+	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-cookie-popup-shortcode.php'),
+	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-contract-withdrawal-shortcode.php'),
+	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-contract-withdrawal-service-shortcode.php'),
+	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-contract-withdrawal-digital-shortcode.php'),
+	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-contract-terms-shortcode.php'),
 
 	        LwWordpress::pluginDir('public/class-lw-wordpress-public.php'),
 

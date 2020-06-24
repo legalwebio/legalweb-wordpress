@@ -46,6 +46,9 @@ class LwWordpressPublic
 	}
 
 	public function writeFooterScripts() {
+
+        if ( LwWordpressSettings::get( 'popup_enabled' ) != '1') return;
+
 		$locale = LwWordpressLanguageTools::getInstance()->getCurrentLanguageCode();
 		$locale = substr( $locale, 0, 2 );
 		$apiData = (new LwWordpressApiAction())->getOrLoadApiData();

@@ -16,9 +16,9 @@ function LwWordpressPrivacyPolicyShortcode($atts){
 
 	try {
 		if ( $apiData == null ||
-		     $apiData->services == null ||
-		     $apiData->services->dpstatement == null ||
-		     $apiData->services->dpstatement->{$locale} == null ) {
+		     isset($apiData->services) == false ||
+		     isset($apiData->services->dpstatement) == false ||
+		     isset($apiData->services->dpstatement->{$locale}) == false ) {
 			return __( 'The pricacy policy for the selected language ' . $locale . ' could not be found.', 'lw-wordpress' );
 		}
 

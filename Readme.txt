@@ -3,7 +3,7 @@ Contributors: legalweb
 Donate link: https://legalweb.io
 Tags: wordpress
 Requires at least: 3.0.1
-Tested up to: 5.3.3
+Tested up to: 5.4.2
 Stable tag: 1.0.0
 Requires PHP: 5.6.0
 License: GPLv2 or later
