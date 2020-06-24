@@ -1,0 +1,378 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: lw-wordpress\n"
+"POT-Creation-Date: 2020-06-24 13:50+0200\n"
+"PO-Revision-Date: 2020-06-24 13:51+0200\n"
+"Last-Translator: \n"
+"Language-Team: legalweb\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: .git\n"
+"X-Poedit-SearchPathExcluded-1: .idea\n"
+"X-Poedit-SearchPathExcluded-2: languages\n"
+"X-Poedit-SearchPathExcluded-3: *.js\n"
+
+#: admin/base.php:7
+msgid "LegalWeb Cloud by legalweb.io"
+msgstr "LegalWeb Cloud by legalweb.io"
+
+#: admin/base.php:13
+msgid "LegalWeb Cloud"
+msgstr "LegalWeb Cloud"
+
+#: admin/class-lw-wordpress-admin-tab.php:51
+msgid "Public property $action not provided"
+msgstr "Public property $action not provided"
+
+#: admin/class-lw-wordpress-admin.php:32 admin/tabs/common-settings/page.php:25
+msgid "Common"
+msgstr "Allgemein"
+
+#: admin/class-lw-wordpress-admin.php:57
+msgid "About legal web"
+msgstr "Über legal web"
+
+#: admin/tabs/common-settings/class-lw-wordpress-common-settings-tab.php:12
+msgid "Common Settings"
+msgstr "Allgemeine Einstellungen"
+
+#: admin/tabs/common-settings/page.php:31
+msgid "License Number/GUID"
+msgstr "Lizenznummer/GUID"
+
+#: admin/tabs/common-settings/page.php:33
+msgid "The license number/GUID which is associated with this domain."
+msgstr "Die Lizenznummer/GUID die mit dieser Domain verknüpft ist."
+
+#: admin/tabs/common-settings/page.php:38
+msgid "Activate Auto Update"
+msgstr "Autom. Update aktivieren"
+
+#: admin/tabs/common-settings/page.php:40
+msgid "Enables the automatic update of the popup, imprint and privacy policy."
+msgstr ""
+"Aktiviert die automatische Aktualisierung aller Inhalte die von der Cloud "
+"geladen werden."
+
+#: admin/tabs/common-settings/page.php:44
+msgid "Enable Popup"
+msgstr "Popup aktivieren"
+
+#: admin/tabs/common-settings/page.php:46
+msgid "Enables the popup where your visitor can opt-in and opt-out."
+msgstr ""
+"Aktiviert das Datenschutzpopup mit dem Ihre Besucher ein Opt-In/Opt-Out "
+"durchführen können."
+
+#: admin/tabs/common-settings/page.php:51
+#: admin/tabs/common-settings/page.php:103
+#: admin/tabs/common-settings/page.php:152
+#: admin/tabs/common-settings/page.php:202
+#: admin/tabs/common-settings/page.php:252
+#: admin/tabs/common-settings/page.php:304
+#: admin/tabs/common-settings/page.php:387
+msgid "Save changes"
+msgstr "Änderungen speichern"
+
+#: admin/tabs/common-settings/page.php:64
+msgid "Privacy policy"
+msgstr "Datenschutz"
+
+#: admin/tabs/common-settings/page.php:70
+msgid "Privacy policy page"
+msgstr "Datenschutz Seite"
+
+#: admin/tabs/common-settings/page.php:72
+#: admin/tabs/common-settings/page.php:124
+#: admin/tabs/common-settings/page.php:174
+#: admin/tabs/common-settings/page.php:224
+#: admin/tabs/common-settings/page.php:276
+#: admin/tabs/common-settings/page.php:359
+msgid "Select"
+msgstr "Wählen"
+
+#: admin/tabs/common-settings/page.php:84
+msgid "Create a page that uses the shortcode <code>[lw-privacypolicy]</code>."
+msgstr ""
+"Erstellt eine Seite die den Shortcode <code>[lw-privacypolicy]</code> "
+"verwendet."
+
+#: admin/tabs/common-settings/page.php:86
+#: admin/tabs/common-settings/page.php:136
+#: admin/tabs/common-settings/page.php:186
+#: admin/tabs/common-settings/page.php:236
+#: admin/tabs/common-settings/page.php:288
+#: admin/tabs/common-settings/page.php:371
+msgid "Create page"
+msgstr "Seite erstellen"
+
+#: admin/tabs/common-settings/page.php:89
+msgid ""
+"Attention: The shortcode <code>[lw-privacypolicy]</code> was not found on "
+"the page you selected."
+msgstr ""
+"Achtung: Der Shortcode <code>[lw-privacypolicy]</code> wurde auf der "
+"gewählten Seite nicht gefunden."
+
+#: admin/tabs/common-settings/page.php:91
+#: admin/tabs/common-settings/page.php:97
+#: admin/tabs/common-settings/page.php:141
+#: admin/tabs/common-settings/page.php:146
+#: admin/tabs/common-settings/page.php:191
+#: admin/tabs/common-settings/page.php:196
+#: admin/tabs/common-settings/page.php:241
+#: admin/tabs/common-settings/page.php:246
+#: admin/tabs/common-settings/page.php:293
+#: admin/tabs/common-settings/page.php:298
+#: admin/tabs/common-settings/page.php:376
+#: admin/tabs/common-settings/page.php:381
+msgid "Edit page"
+msgstr "Seite bearbeiten"
+
+#: admin/tabs/common-settings/page.php:94
+msgid ""
+"This option also sets the wordpress option for the privacy policy page, "
+"which can be accessed in the menu \"Settings/Privacy\"."
+msgstr ""
+"Diese Option setzt auch die Wordpress Einstellung für die "
+"Datenschutzbestimmungen, welche im Menü \"Einstellungen/Datenschutz\" "
+"konfiguriert werden kann."
+
+#: admin/tabs/common-settings/page.php:95
+#: admin/tabs/common-settings/page.php:144
+#: admin/tabs/common-settings/page.php:194
+#: admin/tabs/common-settings/page.php:244
+#: admin/tabs/common-settings/page.php:296
+#: admin/tabs/common-settings/page.php:379
+msgid ""
+"The page can also by edited and text could be extended by the editing the "
+"selected page with the Wordpress page editor like Gutenberg."
+msgstr ""
+"Diese Seite ist eine normale Wordpress Seite, die mit Ihrem Page Editor (z."
+"B. Gutenberg) genauso bearbeitet werden kann, wie Ihre anderen Seiten."
+
+#: admin/tabs/common-settings/page.php:116
+#: includes/class-lw-wordpress-create-page-action.php:17
+msgid "Imprint"
+msgstr "Impressum"
+
+#: admin/tabs/common-settings/page.php:122
+msgid "Imprint page"
+msgstr "Impressum Seite"
+
+#: admin/tabs/common-settings/page.php:134
+msgid "Create a page that uses the shortcode <code>[lw-imprint]</code>."
+msgstr ""
+"Erstellt eine Seite die den Shortcode <code>[lw-imprint]</code> verwendet."
+
+#: admin/tabs/common-settings/page.php:139
+msgid ""
+"Attention: The shortcode <code>[lw-imprint]</code> was not found on the page "
+"you selected."
+msgstr ""
+"Achtung: Der Shortcode <code>[lw-imprint]</code> wurde auf der gewählten "
+"Seite nicht gefunden."
+
+#: admin/tabs/common-settings/page.php:166
+#: includes/class-lw-wordpress-create-page-action.php:22
+msgid "Terms"
+msgstr "AGB"
+
+#: admin/tabs/common-settings/page.php:172
+msgid "Terms page"
+msgstr "AGB Seite"
+
+#: admin/tabs/common-settings/page.php:184
+msgid "Create a page that uses the shortcode <code>[lw-contractterms]</code>."
+msgstr ""
+"Erstellt eine Seite die den Shortcode <code>[lw-contractterms]</code> "
+"verwendet."
+
+#: admin/tabs/common-settings/page.php:189
+msgid ""
+"Attention: The shortcode <code>[lw-contractterms]</code> was not found on "
+"the page you selected."
+msgstr ""
+"Achtung: Der Shortcode <code>[lw-contractterms]</code> wurde auf der "
+"gewählten Seite nicht gefunden."
+
+#: admin/tabs/common-settings/page.php:216
+msgid "Contract  Withdrawal"
+msgstr "Widerrufsbelehrung"
+
+#: admin/tabs/common-settings/page.php:222
+msgid "Contract  withdrawal page"
+msgstr "Widerrufsbelehrung Seite"
+
+#: admin/tabs/common-settings/page.php:234
+msgid ""
+"Create a page that uses the shortcode <code>[lw-contractwithdrawal]</code>."
+msgstr ""
+"Erstellt eine Seite die den Shortcode <code>[lw-contractwithdrawal]</code> "
+"verwendet."
+
+#: admin/tabs/common-settings/page.php:239
+msgid ""
+"Attention: The shortcode <code>[lw-contractwithdrawal]</code> was not found "
+"on the page you selected."
+msgstr ""
+"Achtung: Der Shortcode <code>[lw-contractwithdrawal]</code> wurde auf der "
+"gewählten Seite nicht gefunden."
+
+#: admin/tabs/common-settings/page.php:268
+#: admin/tabs/common-settings/page.php:313
+msgid "Contract  Withdrawal Service"
+msgstr "Widerrufsbelehrung (Dienstleistungen)"
+
+#: admin/tabs/common-settings/page.php:274
+msgid "Contract  withdrawal service page"
+msgstr "Widerrufsbelehrung (Dienstleistungen) Seite"
+
+#: admin/tabs/common-settings/page.php:286
+msgid ""
+"Create a page that uses the shortcode <code>[lw-contractwithdrawalservice]</"
+"code>."
+msgstr ""
+"Erstellt eine Seite die den Shortcode <code>[lw-contractwithdrawalservice]</"
+"code> verwendet."
+
+#: admin/tabs/common-settings/page.php:291
+msgid ""
+"Attention: The shortcode <code>[lw-contractwithdrawalservice]</code> was not "
+"found on the page you selected."
+msgstr ""
+"Achtung: Der Shortcode <code>[lw-contractwithdrawalservice]</code> wurde auf "
+"der gewählten Seite nicht gefunden."
+
+#: admin/tabs/common-settings/page.php:322
+#: admin/tabs/common-settings/page.php:405
+msgid "Content in language code for: "
+msgstr "Inhalt in der Sprache: "
+
+#: admin/tabs/common-settings/page.php:329
+#: admin/tabs/common-settings/page.php:412
+msgid "Copy content to clipboard"
+msgstr "Inhalt in die Zwischenablage kopieren"
+
+#: admin/tabs/common-settings/page.php:334
+#: admin/tabs/common-settings/page.php:417
+msgid ""
+"No texts available. You need to finalize the configuration at your legal web "
+"dashboard."
+msgstr ""
+"Es sind derzeit keine Texte verfügbar bzw. konfiguriert. Bitte schließen Sie "
+"ihre Konfiguration im legal web Dashboard ab."
+
+#: admin/tabs/common-settings/page.php:351
+#: admin/tabs/common-settings/page.php:396
+msgid "Contract  Withdrawal Digital"
+msgstr "Widerrufsbelehrung (Digitale Produkte)"
+
+#: admin/tabs/common-settings/page.php:357
+msgid "Contract  withdrawal digital page"
+msgstr "Widerrufsbelehrung (Digitale Produkte) Seite"
+
+#: admin/tabs/common-settings/page.php:369
+msgid ""
+"Create a page that uses the shortcode <code>[lw-contractwithdrawaldigital]</"
+"code>."
+msgstr ""
+"Erstellt eine Seite die den Shortcode <code>[lw-contractwithdrawaldigital]</"
+"code> verwendet."
+
+#: admin/tabs/common-settings/page.php:374
+msgid ""
+"Attention: The shortcode <code>[lw-contractwithdrawalproduct]</code> was not "
+"found on the page you selected."
+msgstr ""
+"Achtung: Der Shortcode <code>[lw-contractwithdrawalproduct]</code> wurde auf "
+"der gewählten Seite nicht gefunden."
+
+#: admin/tabs/common-settings/page.php:435
+msgid "Version"
+msgstr "Version"
+
+#: admin/tabs/common-settings/page.php:439
+msgid "Date of Version"
+msgstr "Datum der Version"
+
+#: admin/tabs/common-settings/page.php:444
+msgid "Last update check"
+msgstr "Letzter Updateversuch"
+
+#: admin/tabs/common-settings/page.php:453
+msgid "Refresh API Data"
+msgstr "Cloud Daten aktualisieren"
+
+#: includes/class-lw-wordpress-ajax-action.php:89
+msgid "Public property $action not provied"
+msgstr ""
+
+#: includes/class-lw-wordpress-create-page-action.php:12
+msgid "Privacy Policy"
+msgstr "Datenschutz"
+
+#: includes/class-lw-wordpress-create-page-action.php:26
+msgid "Contract Withdrawal"
+msgstr "Widerrufsbelehrung"
+
+#: includes/class-lw-wordpress-create-page-action.php:30
+msgid "Contract Withdrawal (Service)"
+msgstr "Widerrufsbelehrung (Dienstleistungen)"
+
+#: includes/class-lw-wordpress-create-page-action.php:34
+msgid "Contract Withdrawal (Digital)"
+msgstr "Widerrufsbelehrung (Digitale Produkte)"
+
+#: includes/class-lw-wordpress-cron.php:66
+msgid "All"
+msgstr "Alle"
+
+#: includes/class-lw-wordpress-cron.php:66
+msgid "Minutes"
+msgstr "Minuten"
+
+#: includes/shortcodes/class-lw-wordpress-contract-terms-shortcode.php:22
+#: includes/shortcodes/class-lw-wordpress-contract-terms-shortcode.php:28
+msgid "The contract terms for the selected language "
+msgstr "Die AGB für die gewählte Sprache "
+
+#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-digital-shortcode.php:22
+#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-digital-shortcode.php:28
+msgid "The contract withdrawal digital for the selected language "
+msgstr "Die Widerrufsbelehrung (Digitale Produkte) für die gewählte Sprache "
+
+#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-service-shortcode.php:22
+#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-service-shortcode.php:28
+msgid "The contract withdrawal service for the selected language "
+msgstr "Die Widerrufsbelehrung (Dienstleistungen) für die gewählte Sprache "
+
+#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-shortcode.php:22
+#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-shortcode.php:28
+msgid "The contract withdrawal for the selected language "
+msgstr "Die Widerrufsbelehrung für die gewählte Sprache "
+
+#: includes/shortcodes/class-lw-wordpress-cookie-popup-shortcode.php:7
+msgid "Cookie Popup"
+msgstr "Cookie Popup"
+
+#: includes/shortcodes/class-lw-wordpress-imprint-shortcode.php:22
+#: includes/shortcodes/class-lw-wordpress-imprint-shortcode.php:28
+#: public/class-lw-wordpress-public.php:96
+msgid "The imprint for the selected language "
+msgstr "Das Impressum für die gewählte Sprache "
+
+#: includes/shortcodes/class-lw-wordpress-privacy-policy-shortcode.php:22
+#: includes/shortcodes/class-lw-wordpress-privacy-policy-shortcode.php:28
+msgid "The pricacy policy for the selected language "
+msgstr "Die Datenschutzbestimmungen für die gewählte Sprache "
+
+#~ msgid "Settings"
+#~ msgstr "Einstellungen"

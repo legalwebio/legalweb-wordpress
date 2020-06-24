@@ -10,7 +10,7 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><?php _e('Legalweb Cloud', 'lw-wordpress'); ?></a></li>
+            <li class="breadcrumb-item"><a href="#"><?php _e('LegalWeb Cloud', 'lw-wordpress'); ?></a></li>
             <li class="breadcrumb-item active" aria-current="page"><?= __($tabs[$tab]->getTabTitle(),'lw-wordpress');;?></li>
         </ol>
     </nav>

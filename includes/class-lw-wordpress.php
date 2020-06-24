@@ -71,7 +71,6 @@ class LwWordpress
             LwWordpress::pluginDir('includes/class-lw-wordpress-constants.php'),
 	        LwWordpress::pluginDir('includes/helpers.php'),
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-installer.php'),
-	        LwWordpress::pluginDir('includes/class-lw-wordpress-database-api.php'),
 	        LwWordpress::pluginDir('admin/class-lw-wordpress-admin.php'),
 	        LwWordpress::pluginDir('admin/class-lw-wordpress-admin-tab.php'),
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-ajax-action.php'),
@@ -82,6 +81,7 @@ class LwWordpress
 	        LwWordpress::pluginDir('includes/class-lw-wordpress-cron.php'),
 	        LwWordpress::pluginDir('includes/cron/class-lw-wordpress-api-cron.php'),
 
+	        // SHORTCODES
 	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-imprint-shortcode.php'),
 	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-privacy-policy-shortcode.php'),
 	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-cookie-popup-shortcode.php'),
@@ -100,9 +100,6 @@ class LwWordpress
 	        LwWordpress::pluginDir('admin/tabs/common-settings/class-lw-wordpress-common-settings-tab.php'),
 	        LwWordpress::pluginDir('admin/tabs/common-settings/class-lw-wordpress-common-settings-action.php'),
 
-
-	        // SHORTCODES
-	       // LwWordpress::pluginDir('public/shortcodes/shortcode-user-wordpress-mgmt.php'),
         );
 
         foreach($load as $path){
