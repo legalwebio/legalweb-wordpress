@@ -9,11 +9,11 @@ Requires PHP: 5.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Wordpress Plugin for the needs of the boys (and girls) of legal web. :)
+ Wordpress Plugin for GDPR/DSGVO, Imprint & Pricacy Policy and other legal texts to use with the legalweb.io cloud service.
 
 == Description ==
 
-Wordpress Plugin for the needs of the boys (and girls) of legal web. :)
+With this plugin, you can use the legalweb.io cloud service with your Wordpress page. It connects to the legalweb.io web API and fetches your legal texts, integrations to insert it in your Wordpress Page.
 
 == Installation ==
 

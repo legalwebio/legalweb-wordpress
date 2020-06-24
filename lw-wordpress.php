@@ -7,12 +7,11 @@
  * @package           LegalWeb Cloud
  *
  * Plugin Name:   LegalWeb Cloud
- * Plugin URI:    https://www.legalweb.io
- * Description:   Wordpress Plugin for DSGVO, Imprint & Pricacy Policy of legalweb.io
+ * Description:   Wordpress Plugin for GDPR/DSGVO, Imprint & Pricacy Policy and other legal texts to use with the legalweb.io cloud service.
  * Version:       1.0.0
  * Author:        legalweb
  * Author URI:    https://www.legalweb.io
- * License:       A "Slug" license name e.g. GPL2 // todo
+ * License URI:   http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:   lw-wordpress
 */
 

@@ -55,6 +55,7 @@ $hasCheckout =  $apiData != null && $apiData->services != null && isset($apiData
         </form>
     </div>
 
+	<?php if ($hasPP) : ?>
     <!-- privacy policy -->
     <div class="card">
         <form method="post" action="<?= admin_url( '/admin-ajax.php' ); ?>" style="display: inline">
@@ -105,6 +106,7 @@ $hasCheckout =  $apiData != null && $apiData->services != null && isset($apiData
             </div>
         </form>
     </div>
+	<?php endif; ?>
 
     <?php if ($hasImprint) : ?>
     <!-- imprint -->

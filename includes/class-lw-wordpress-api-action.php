@@ -20,6 +20,8 @@ class LwWordpressApiAction extends LwWordpressAjaxAction {
 
 		if ( empty( $licenceKey ) == false ) {
 			$licenceKey = trim( $licenceKey );
+		} else {
+			return null;
 		}
 
 
@@ -77,7 +79,7 @@ class LwWordpressApiAction extends LwWordpressAjaxAction {
 	{
 		// try to load from local cache, if nothing is there refresh
 		$apiDataString = LwWordpressSettings::get( 'api_data');
-		if (empty($apiDataString)) return $this->$this->refreshApiData();
+		if (empty($apiDataString)) return $this->refreshApiData();
 
 		// deserialize stored api data and return it if it succeed
 		$apiData = json_decode($apiDataString);

@@ -57,8 +57,8 @@ class LwWordpressPublic
 
 			// write popup styles
 			if ( $apiData != null &&
-			     $apiData->services != null &&
-				 $apiData->services->dppopupcss != null) {
+			     isset($apiData->services) &&
+			     isset($apiData->services->dppopupcss)) {
 
 				echo '<style>';
 				echo $apiData->services->dppopupcss;
@@ -67,19 +67,19 @@ class LwWordpressPublic
 
 			// write popup html
 			if ( $apiData != null &&
-			     $apiData->services != null &&
-			     $apiData->services->dppopup != null &&
-			     $apiData->services->dppopup->{$locale} != null) {
+			     isset($apiData->services) &&
+			     isset($apiData->services->dppopup) &&
+			     isset($apiData->services->dppopup->{$locale})) {
 
 				echo $apiData->services->dppopup->{$locale};
 			}
 
 			// write popup scripts
 			if ( $apiData != null &&
-			     $apiData->services != null &&
-				 $apiData->services->dppopupjs != null &&
-			     $apiData->services->dppopupconfig->spDsgvoGeneralConfig != null &&
-			     $apiData->services->dppopupconfig->spDsgvoIntegrationConfig) {
+			      isset($apiData->services) &&
+				  isset($apiData->services->dppopupjs) &&
+			      isset($apiData->services->dppopupconfig->spDsgvoGeneralConfig) &&
+			      isset($apiData->services->dppopupconfig->spDsgvoIntegrationConfig)) {
 		?>
 			<script>
 			    var spDsgvoGeneralConfig = JSON.parse('<?php echo json_encode($apiData->services->dppopupconfig->spDsgvoGeneralConfig); ?>');
