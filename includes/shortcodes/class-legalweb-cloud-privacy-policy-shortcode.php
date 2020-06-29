@@ -19,13 +19,13 @@ function LegalWebCloudPrivacyPolicyShortcode($atts){
 		     isset($apiData->services) == false ||
 		     isset($apiData->services->dpstatement) == false ||
 		     isset($apiData->services->dpstatement->{$locale}) == false ) {
-			return __( 'The pricacy policy for the selected language ' . $locale . ' could not be found.', 'legalweb-cloud' );
+			return __( 'The privacy policy for the selected language ' . $locale . ' could not be found.', 'legalweb-cloud' );
 		}
 
 		return apply_filters('the_content', $apiData->services->dpstatement->{$locale});
 	} catch (Exception  $e)
 	{
-		return __( 'The pricacy policy for the selected language ' . $locale . ' could not be found.', 'legalweb-cloud' );
+		return __( 'The privacy policy for the selected language ' . $locale . ' could not be found.', 'legalweb-cloud' );
 	}
 }
 
