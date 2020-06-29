@@ -23,7 +23,7 @@
  * version of the plugin.
  *
  */
-abstract class LwWordpressAjaxAction{
+abstract class LegalWebCloudAjaxAction{
 
 	protected $action;
 	public $request;
@@ -86,7 +86,7 @@ abstract class LwWordpressAjaxAction{
 		$reflection = new ReflectionClass($class);
 		$action = $reflection->newInstanceWithoutConstructor();
 		if(!isset($action->action)){
-			throw new Exception(__("Public property \$action not provied", 'lw-wordpress'));
+			throw new Exception(__("Public property \$action not provied", 'legalweb-cloud'));
 		}
 		return $action->action;
 	}

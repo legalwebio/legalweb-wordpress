@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: lw-wordpress\n"
+"Project-Id-Version: legalweb-cloud\n"
 "POT-Creation-Date: 2020-06-24 13:50+0200\n"
 "PO-Revision-Date: 2020-06-24 13:51+0200\n"
 "Last-Translator: \n"
@@ -27,19 +27,19 @@ msgstr "LegalWeb Cloud by legalweb.io"
 msgid "LegalWeb Cloud"
 msgstr "LegalWeb Cloud"
 
-#: admin/class-lw-wordpress-admin-tab.php:51
+#: admin/class-legalweb-cloud-admin-tab.php:51
 msgid "Public property $action not provided"
 msgstr "Public property $action not provided"
 
-#: admin/class-lw-wordpress-admin.php:32 admin/tabs/common-settings/page.php:25
+#: admin/class-legalweb-cloud-admin.php:32 admin/tabs/common-settings/page.php:25
 msgid "Common"
 msgstr "Allgemein"
 
-#: admin/class-lw-wordpress-admin.php:57
+#: admin/class-legalweb-cloud-admin.php:57
 msgid "About legal web"
 msgstr "Über legal web"
 
-#: admin/tabs/common-settings/class-lw-wordpress-common-settings-tab.php:12
+#: admin/tabs/common-settings/class-legalweb-cloud-common-settings-tab.php:12
 msgid "Common Settings"
 msgstr "Allgemeine Einstellungen"
 
@@ -159,7 +159,7 @@ msgstr ""
 "B. Gutenberg) genauso bearbeitet werden kann, wie Ihre anderen Seiten."
 
 #: admin/tabs/common-settings/page.php:116
-#: includes/class-lw-wordpress-create-page-action.php:17
+#: includes/class-legalweb-cloud-create-page-action.php:17
 msgid "Imprint"
 msgstr "Impressum"
 
@@ -181,7 +181,7 @@ msgstr ""
 "Seite nicht gefunden."
 
 #: admin/tabs/common-settings/page.php:166
-#: includes/class-lw-wordpress-create-page-action.php:22
+#: includes/class-legalweb-cloud-create-page-action.php:22
 msgid "Terms"
 msgstr "AGB"
 
@@ -311,66 +311,66 @@ msgstr "Letzter Updateversuch"
 msgid "Refresh API Data"
 msgstr "Cloud Daten aktualisieren"
 
-#: includes/class-lw-wordpress-ajax-action.php:89
+#: includes/class-legalweb-cloud-ajax-action.php:89
 msgid "Public property $action not provied"
 msgstr ""
 
-#: includes/class-lw-wordpress-create-page-action.php:12
+#: includes/class-legalweb-cloud-create-page-action.php:12
 msgid "Privacy Policy"
 msgstr "Datenschutz"
 
-#: includes/class-lw-wordpress-create-page-action.php:26
+#: includes/class-legalweb-cloud-create-page-action.php:26
 msgid "Contract Withdrawal"
 msgstr "Widerrufsbelehrung"
 
-#: includes/class-lw-wordpress-create-page-action.php:30
+#: includes/class-legalweb-cloud-create-page-action.php:30
 msgid "Contract Withdrawal (Service)"
 msgstr "Widerrufsbelehrung (Dienstleistungen)"
 
-#: includes/class-lw-wordpress-create-page-action.php:34
+#: includes/class-legalweb-cloud-create-page-action.php:34
 msgid "Contract Withdrawal (Digital)"
 msgstr "Widerrufsbelehrung (Digitale Produkte)"
 
-#: includes/class-lw-wordpress-cron.php:66
+#: includes/class-legalweb-cloud-cron.php:66
 msgid "All"
 msgstr "Alle"
 
-#: includes/class-lw-wordpress-cron.php:66
+#: includes/class-legalweb-cloud-cron.php:66
 msgid "Minutes"
 msgstr "Minuten"
 
-#: includes/shortcodes/class-lw-wordpress-contract-terms-shortcode.php:22
-#: includes/shortcodes/class-lw-wordpress-contract-terms-shortcode.php:28
+#: includes/shortcodes/class-legalweb-cloud-contract-terms-shortcode.php:22
+#: includes/shortcodes/class-legalweb-cloud-contract-terms-shortcode.php:28
 msgid "The contract terms for the selected language "
 msgstr "Die AGB für die gewählte Sprache "
 
-#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-digital-shortcode.php:22
-#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-digital-shortcode.php:28
+#: includes/shortcodes/class-legalweb-cloud-contract-withdrawal-digital-shortcode.php:22
+#: includes/shortcodes/class-legalweb-cloud-contract-withdrawal-digital-shortcode.php:28
 msgid "The contract withdrawal digital for the selected language "
 msgstr "Die Widerrufsbelehrung (Digitale Produkte) für die gewählte Sprache "
 
-#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-service-shortcode.php:22
-#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-service-shortcode.php:28
+#: includes/shortcodes/class-legalweb-cloud-contract-withdrawal-service-shortcode.php:22
+#: includes/shortcodes/class-legalweb-cloud-contract-withdrawal-service-shortcode.php:28
 msgid "The contract withdrawal service for the selected language "
 msgstr "Die Widerrufsbelehrung (Dienstleistungen) für die gewählte Sprache "
 
-#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-shortcode.php:22
-#: includes/shortcodes/class-lw-wordpress-contract-withdrawal-shortcode.php:28
+#: includes/shortcodes/class-legalweb-cloud-contract-withdrawal-shortcode.php:22
+#: includes/shortcodes/class-legalweb-cloud-contract-withdrawal-shortcode.php:28
 msgid "The contract withdrawal for the selected language "
 msgstr "Die Widerrufsbelehrung für die gewählte Sprache "
 
-#: includes/shortcodes/class-lw-wordpress-cookie-popup-shortcode.php:7
+#: includes/shortcodes/class-legalweb-cloud-cookie-popup-shortcode.php:7
 msgid "Cookie Popup"
 msgstr "Cookie Popup"
 
-#: includes/shortcodes/class-lw-wordpress-imprint-shortcode.php:22
-#: includes/shortcodes/class-lw-wordpress-imprint-shortcode.php:28
-#: public/class-lw-wordpress-public.php:96
+#: includes/shortcodes/class-legalweb-cloud-imprint-shortcode.php:22
+#: includes/shortcodes/class-legalweb-cloud-imprint-shortcode.php:28
+#: public/class-legalweb-cloud-public.php:96
 msgid "The imprint for the selected language "
 msgstr "Das Impressum für die gewählte Sprache "
 
-#: includes/shortcodes/class-lw-wordpress-privacy-policy-shortcode.php:22
-#: includes/shortcodes/class-lw-wordpress-privacy-policy-shortcode.php:28
+#: includes/shortcodes/class-legalweb-cloud-privacy-policy-shortcode.php:22
+#: includes/shortcodes/class-legalweb-cloud-privacy-policy-shortcode.php:28
 msgid "The pricacy policy for the selected language "
 msgstr "Die Datenschutzbestimmungen für die gewählte Sprache "
 

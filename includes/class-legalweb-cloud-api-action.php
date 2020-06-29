@@ -1,6 +1,6 @@
 <?php
 
-class LwWordpressApiAction extends LwWordpressAjaxAction {
+class LegalWebCloudApiAction extends LegalWebCloudAjaxAction {
 
 	protected $action = 'admin-api-action';
 
@@ -14,9 +14,9 @@ class LwWordpressApiAction extends LwWordpressAjaxAction {
 
 	public function refreshApiData()
 	{
-		LwWordpressSettings::set( 'api_data_last_refresh_date', date("D M d, Y G:i"));
+		LegalWebCloudSettings::set( 'api_data_last_refresh_date', date("D M d, Y G:i"));
 
-		$licenceKey = LwWordpressSettings::get( 'license_number' );
+		$licenceKey = LegalWebCloudSettings::get( 'license_number' );
 
 		if ( empty( $licenceKey ) == false ) {
 			$licenceKey = trim( $licenceKey );
@@ -29,11 +29,11 @@ class LwWordpressApiAction extends LwWordpressAjaxAction {
 		$homeUrl = get_home_url();
 
 
-		$url = LwWordpressConstants::LW_API_BASE_URL;
+		$url = LegalWebCloudConstants::LW_API_BASE_URL;
 
 		$headers = array(
 			'Content-Type' => 'application/x-www-form-urlencoded',
-			'Callback'     => $homeUrl.'wp-json/'.lw_wordpress_NAME.'/v1/callback',
+			'Callback'     => $homeUrl.'wp-json/'.legalweb_cloud_NAME.'/v1/callback',
 			'Guid'         => $licenceKey
 		);
 		$options = array();
@@ -47,19 +47,19 @@ class LwWordpressApiAction extends LwWordpressAjaxAction {
 			$requestData = json_decode($request->body);
 
 			if ($requestData != null) {
-				if (LwWordpressSettings::get('api_data_version') !=  $requestData->lw_api->version ||
-				    LwWordpressSettings::get('api_data_guid') !=  $licenceKey
+				if (LegalWebCloudSettings::get('api_data_version') !=  $requestData->lw_api->version ||
+				    LegalWebCloudSettings::get('api_data_guid') !=  $licenceKey
 				) // only store if version differs
 				{
-					LwWordpressSettings::set( 'api_data', $request->body );
-					LwWordpressSettings::set( 'api_data_date', date( "D M d, Y G:i" ) );
-					LwWordpressSettings::set( 'api_data_version', $requestData->lw_api->version );
-					LwWordpressSettings::set( 'api_data_guid', $licenceKey );
+					LegalWebCloudSettings::set( 'api_data', $request->body );
+					LegalWebCloudSettings::set( 'api_data_date', date( "D M d, Y G:i" ) );
+					LegalWebCloudSettings::set( 'api_data_version', $requestData->lw_api->version );
+					LegalWebCloudSettings::set( 'api_data_guid', $licenceKey );
 
 					return $requestData;
 				} else
 				{
-					$apiDataString = LwWordpressSettings::get( 'api_data');
+					$apiDataString = LegalWebCloudSettings::get( 'api_data');
 					return json_decode($apiDataString);
 				}
 			} else {
@@ -78,7 +78,7 @@ class LwWordpressApiAction extends LwWordpressAjaxAction {
 	public function getOrLoadApiData()
 	{
 		// try to load from local cache, if nothing is there refresh
-		$apiDataString = LwWordpressSettings::get( 'api_data');
+		$apiDataString = LegalWebCloudSettings::get( 'api_data');
 		if (empty($apiDataString)) return $this->refreshApiData();
 
 		// deserialize stored api data and return it if it succeed
@@ -91,4 +91,4 @@ class LwWordpressApiAction extends LwWordpressAjaxAction {
 	}
 }
 
-LwWordpressApiAction::listen();
+LegalWebCloudApiAction::listen();

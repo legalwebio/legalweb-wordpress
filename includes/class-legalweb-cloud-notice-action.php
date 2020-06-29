@@ -1,6 +1,6 @@
 <?php
 
-Class LwWordpressNoticeAction extends LwWordpressAjaxAction{
+Class LegalWebCloudNoticeAction extends LegalWebCloudAjaxAction{
 
     protected $action = 'lw-notice-action';
 
@@ -15,15 +15,15 @@ Class LwWordpressNoticeAction extends LwWordpressAjaxAction{
             die;
         }
 
-	    $dismissedApiMessages = LwWordpressSettings::get('dismissed_api_message_ids');
+	    $dismissedApiMessages = LegalWebCloudSettings::get('dismissed_api_message_ids');
 	    if (is_array($dismissedApiMessages) == false) $dismissedApiMessages = [];
 
 	    if (in_array($noticeKey, $dismissedApiMessages) == false) {
 		    $dismissedApiMessages[] = $noticeKey;
-		    LwWordpressSettings::set( 'dismissed_api_message_ids', $dismissedApiMessages );
+		    LegalWebCloudSettings::set( 'dismissed_api_message_ids', $dismissedApiMessages );
 	    }
         die;
     }
 }
 
-LwWordpressNoticeAction::listen();
+LegalWebCloudNoticeAction::listen();

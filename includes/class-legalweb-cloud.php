@@ -1,7 +1,7 @@
 <?php
 
 
-class LwWordpress
+class LegalWebCloud
 {
 
     /**
@@ -33,7 +33,7 @@ class LwWordpress
     protected static $instance = null;
 
     protected function __construct(){
-        $this->version = lw_wordpress_VERSION;
+        $this->version = legalweb_cloud_VERSION;
         $this->loadDependencies();
 
         if (is_admin()) {
@@ -59,8 +59,8 @@ class LwWordpress
 
     private function loadDependencies()
     {
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-lw-wordpress-loader.php';
-        $this->loader = new LwWordpressLoader();
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-legalweb-cloud-loader.php';
+        $this->loader = new LegalWebCloudLoader();
 
         $load = array(
             //======================================================================
@@ -68,37 +68,37 @@ class LwWordpress
             //======================================================================
 
 
-            LwWordpress::pluginDir('includes/class-lw-wordpress-constants.php'),
-	        LwWordpress::pluginDir('includes/helpers.php'),
-	        LwWordpress::pluginDir('includes/class-lw-wordpress-installer.php'),
-	        LwWordpress::pluginDir('admin/class-lw-wordpress-admin.php'),
-	        LwWordpress::pluginDir('admin/class-lw-wordpress-admin-tab.php'),
-	        LwWordpress::pluginDir('includes/class-lw-wordpress-ajax-action.php'),
-	        LwWordpress::pluginDir('includes/class-lw-wordpress-settings.php'),
-	        LwWordpress::pluginDir('includes/class-lw-wordpress-create-page-action.php'),
-	        LwWordpress::pluginDir('includes/class-lw-wordpress-api-action.php'),
-	        LwWordpress::pluginDir('includes/class-lw-wordpress-notice-action.php'),
-	        LwWordpress::pluginDir('includes/class-lw-wordpress-cron.php'),
-	        LwWordpress::pluginDir('includes/cron/class-lw-wordpress-api-cron.php'),
+            LegalWebCloud::pluginDir('includes/class-legalweb-cloud-constants.php'),
+	        LegalWebCloud::pluginDir('includes/helpers.php'),
+	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-installer.php'),
+	        LegalWebCloud::pluginDir('admin/class-legalweb-cloud-admin.php'),
+	        LegalWebCloud::pluginDir('admin/class-legalweb-cloud-admin-tab.php'),
+	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-ajax-action.php'),
+	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-settings.php'),
+	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-create-page-action.php'),
+	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-api-action.php'),
+	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-notice-action.php'),
+	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-cron.php'),
+	        LegalWebCloud::pluginDir('includes/cron/class-legalweb-cloud-api-cron.php'),
 
 	        // SHORTCODES
-	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-imprint-shortcode.php'),
-	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-privacy-policy-shortcode.php'),
-	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-cookie-popup-shortcode.php'),
-	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-contract-withdrawal-shortcode.php'),
-	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-contract-withdrawal-service-shortcode.php'),
-	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-contract-withdrawal-digital-shortcode.php'),
-	        LwWordpress::pluginDir('includes/shortcodes/class-lw-wordpress-contract-terms-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-imprint-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-privacy-policy-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-cookie-popup-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-withdrawal-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-withdrawal-service-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-withdrawal-digital-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-terms-shortcode.php'),
 
-	        LwWordpress::pluginDir('public/class-lw-wordpress-public.php'),
+	        LegalWebCloud::pluginDir('public/class-legalweb-cloud-public.php'),
 
 	        //======================================================================
 	        // Admin Pages
 	        //======================================================================
 
 	        // Common Settings
-	        LwWordpress::pluginDir('admin/tabs/common-settings/class-lw-wordpress-common-settings-tab.php'),
-	        LwWordpress::pluginDir('admin/tabs/common-settings/class-lw-wordpress-common-settings-action.php'),
+	        LegalWebCloud::pluginDir('admin/tabs/common-settings/class-legalweb-cloud-common-settings-tab.php'),
+	        LegalWebCloud::pluginDir('admin/tabs/common-settings/class-legalweb-cloud-common-settings-action.php'),
 
         );
 
@@ -106,12 +106,12 @@ class LwWordpress
             require_once $path;
         }
 
-        do_action('lw_wordpress_booted');
+        do_action('legalweb_cloud_booted');
     }
 
     private function defineAdminHooks()
     {
-        $admin = new LwWordpressAdmin();
+        $admin = new LegalWebCloudAdmin();
         $this->loader->add_action('init', $admin, 'adminInit', 10);
         $this->loader->add_action('admin_enqueue_scripts', $admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $admin, 'enqueue_scripts');
@@ -125,7 +125,7 @@ class LwWordpress
 
     private function definePublicHooks()
     {
-        $public = new LwWordpressPublic();
+        $public = new LegalWebCloudPublic();
         $this->loader->add_action( 'wp_enqueue_scripts', $public, 'enqueue_styles');
         $this->loader->add_action( 'wp_enqueue_scripts', $public, 'enqueue_scripts');
 
@@ -152,7 +152,7 @@ class LwWordpress
      * @since     1.0.0
      * @return    string    The name of the plugin.
      */
-    public function get_lw_wordpress() {
+    public function get_legalweb_cloud() {
         return lw_aff_NAME;
     }
 

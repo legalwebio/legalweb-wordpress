@@ -1,7 +1,7 @@
 <?php
 
 
-class LwWordpressInstaller {
+class LegalWebCloudInstaller {
 
 	private static $instance;
 

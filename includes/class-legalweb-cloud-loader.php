@@ -1,7 +1,7 @@
 <?php
 
 
-class LwWordpressLoader
+class LegalWebCloudLoader
 {
     /**
      * The array of actions registered with WordPress.

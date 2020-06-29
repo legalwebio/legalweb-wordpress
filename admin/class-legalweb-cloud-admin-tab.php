@@ -14,13 +14,13 @@
  * Abstract class that provides boilerplate methods for an extension.
  *
  */
-abstract class LwWordpressAdminTab{
+abstract class LegalWebCloudAdminTab{
 
 	public $isHidden = false;
 	public $isHighlighted = false;
 
 	public function uri(){
-        return sprintf('%sadmin.php?page=lw-wordpress&tab=%s', get_admin_url(), $this->slug);
+        return sprintf('%sadmin.php?page=legalweb-cloud&tab=%s', get_admin_url(), $this->slug);
     }
 
     public function isHidden(){
@@ -48,7 +48,7 @@ abstract class LwWordpressAdminTab{
         $reflection = new ReflectionClass($class);
         $tab = $reflection->newInstanceWithoutConstructor();
         if(!isset($tab->title)){
-            throw new Exception(__("Public property \$action not provided", 'lw-wordpress'));
+            throw new Exception(__("Public property \$action not provided", 'legalweb-cloud'));
         }
         return $tab->title;
     }

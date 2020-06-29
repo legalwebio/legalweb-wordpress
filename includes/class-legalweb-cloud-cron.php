@@ -1,6 +1,6 @@
 <?php
 
-Class LwWordpressCron{
+Class LegalWebCloudCron{
 
 	public function slug(){
 		$reflect = new ReflectionClass($this);
@@ -63,7 +63,7 @@ Class LwWordpressCron{
 		if(!in_array($this->schedule(), array_keys($schedules))){
 			$schedules[$this->schedule()] = array(
 				'interval' => $interval,
-				'display'  => __('All', 'lw-wordpress') . ' '. floor($interval / 60) .' ' . __('Minutes', 'lw-wordpress'),
+				'display'  => __('All', 'legalweb-cloud') . ' '. floor($interval / 60) .' ' . __('Minutes', 'legalweb-cloud'),
 			);
 		}
 

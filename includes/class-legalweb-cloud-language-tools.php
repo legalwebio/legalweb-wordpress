@@ -1,7 +1,7 @@
 <?php
 
 
-class LwWordpressLanguageTools
+class LegalWebCloudLanguageTools
 {
     public $defaultLanguage = 'en_EN';
 

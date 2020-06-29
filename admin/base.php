@@ -3,15 +3,15 @@
 <div class="lw-aff" style="padding-right: 15px">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-2 text-white">
         <a class="navbar-brand" href="#">
-            <img src="<?php echo LwWordpress::pluginURI('public\images\legalwebio-logo-icon-white.svg'); ?>" width="30" height="30" class="d-inline-block align-top" alt="">
-            <a class="navbar-brand"><?php _e('LegalWeb Cloud by legalweb.io', 'lw-wordpress'); ?></a>
+            <img src="<?php echo LegalWebCloud::pluginURI('public\images\legalwebio-logo-icon-white.svg'); ?>" width="30" height="30" class="d-inline-block align-top" alt="">
+            <a class="navbar-brand"><?php _e('LegalWeb Cloud by legalweb.io', 'legalweb-cloud'); ?></a>
         </a>
     </nav>
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#"><?php _e('LegalWeb Cloud', 'lw-wordpress'); ?></a></li>
-            <li class="breadcrumb-item active" aria-current="page"><?= __($tabs[$tab]->getTabTitle(),'lw-wordpress');;?></li>
+            <li class="breadcrumb-item"><a href="#"><?php _e('LegalWeb Cloud', 'legalweb-cloud'); ?></a></li>
+            <li class="breadcrumb-item active" aria-current="page"><?= __($tabs[$tab]->getTabTitle(),'legalweb-cloud');;?></li>
         </ol>
     </nav>
     <div class="row">

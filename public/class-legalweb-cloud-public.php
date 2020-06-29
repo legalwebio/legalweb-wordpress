@@ -1,7 +1,7 @@
 <?php
 
 
-class LwWordpressPublic
+class LegalWebCloudPublic
 {
 
 	public static function startBuffer()
@@ -16,8 +16,7 @@ class LwWordpressPublic
      */
     public function enqueue_styles()
     {
-        wp_enqueue_style(lw_wordpress_NAME.'_twbs4', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css', array(), lw_wordpress_VERSION, 'all');
-        wp_enqueue_style(lw_wordpress_NAME, plugin_dir_url(__FILE__) . 'css/lw-wordpress-public.css', array(), lw_wordpress_VERSION, 'all');
+        wp_enqueue_style(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'css/legalweb-cloud-public.css', array(), legalweb_cloud_VERSION, 'all');
     }
 
     /**
@@ -27,10 +26,9 @@ class LwWordpressPublic
      */
     public function enqueue_scripts()
     {
-        wp_enqueue_script(lw_wordpress_NAME, plugin_dir_url(__FILE__) . 'js/lw-wordpress-public.js', array(
+        wp_enqueue_script(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'js/legalweb-cloud-public.js', array(
             'jquery'
-        ), lw_wordpress_VERSION, false);
-	    wp_enqueue_script(lw_wordpress_NAME.'-bootstrap', plugin_dir_url(__FILE__). 'js/bootstrap.min.js', array('jquery'), lw_wordpress_VERSION, false );
+        ), legalweb_cloud_VERSION, false);
     }
 
 	public function writeHeaderScripts()
@@ -47,11 +45,11 @@ class LwWordpressPublic
 
 	public function writeFooterScripts() {
 
-        if ( LwWordpressSettings::get( 'popup_enabled' ) != '1') return;
+        if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
 
-		$locale = LwWordpressLanguageTools::getInstance()->getCurrentLanguageCode();
+		$locale = LegalWebCloudLanguageTools::getInstance()->getCurrentLanguageCode();
 		$locale = substr( $locale, 0, 2 );
-		$apiData = (new LwWordpressApiAction())->getOrLoadApiData();
+		$apiData = (new LegalWebCloudApiAction())->getOrLoadApiData();
 
 		try {
 
@@ -93,13 +91,13 @@ class LwWordpressPublic
 
 		} catch (Exception $e)
 		{
-			return __( 'The imprint for the selected language ' . $locale . ' could not be found.', 'lw-wordpress' );
+			return __( 'The imprint for the selected language ' . $locale . ' could not be found.', 'legalweb-cloud' );
 		}
 	}
 
 	public function registerLwCallbackEndpoint()
     {
-	    register_rest_route( lw_wordpress_NAME.'/v1', '/callback', array(
+	    register_rest_route( legalweb_cloud_NAME.'/v1', '/callback', array(
 		    'methods' => 'GET',
 		    'callback' =>  array($this, 'lwWordpressCallbackUrlAction'),
 	    ) );
@@ -110,11 +108,11 @@ class LwWordpressPublic
 		//$guid = $request['guid'];
 
         try {
-	        ( new LwWordpressApiAction() )->refreshApiData();
+	        ( new LegalWebCloudApiAction() )->refreshApiData();
 	        $response = new WP_REST_Response( array(
 		        'status'  => 'OK',
-		        'guid'    => LwWordpressSettings::get( 'license_number' ),
-		        'version' => LwWordpressSettings::get( 'api_data_version' )
+		        'guid'    => LegalWebCloudSettings::get( 'license_number' ),
+		        'version' => LegalWebCloudSettings::get( 'api_data_version' )
 	        ) );
 	        $response->set_status( 200 );
         } catch (Exception $e)

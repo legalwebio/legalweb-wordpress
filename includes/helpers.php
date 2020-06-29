@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('lwWriteInput')) {
+if (! function_exists( 'legalwebWriteInput' )) {
 	/**
 	 *
 	 * write a bootstrap html input code
@@ -17,7 +17,7 @@ if (! function_exists('lwWriteInput')) {
 	 * @return      null
 	 *
 	 */
-	function lwWriteInput($type, $id, $settingsKey, $initalValue, $label, $placeholder, $infoText, $addFormGroup = true, $class = '', $cbValue = '1', $enabled = true, $visible = true )
+	function legalwebWriteInput($type, $id, $settingsKey, $initalValue, $label, $placeholder, $infoText, $addFormGroup = true, $class = '', $cbValue = '1', $enabled = true, $visible = true )
 	{
 		if ($addFormGroup) echo '<div class="form-group '. ($visible ? '' : 'spdsgvo-d-none') .'">';
 
@@ -82,8 +82,8 @@ if (! function_exists('lwWriteInput')) {
 	}
 }
 
-if (! function_exists('lwWriteSelect')) {
-	function lwWriteSelect($elements, $id, $settingsKey, $initalValue, $label, $placeholder, $infoText, $addFormGroup = true, $class = '' )
+if (! function_exists( 'legalwebWriteSelect' )) {
+	function legalwebWriteSelect($elements, $id, $settingsKey, $initalValue, $label, $placeholder, $infoText, $addFormGroup = true, $class = '' )
 	{
 		if ($addFormGroup) echo '<div class="form-group">';
 
@@ -112,9 +112,9 @@ if (! function_exists('lwWriteSelect')) {
 	}
 }
 
-if (! function_exists('pageContainsString')) {
+if (! function_exists('legalwebPageContainsString')) {
 
-	function lwPageContainsString($pageID, $string)
+	function legalwebPageContainsString($pageID, $string)
 	{
 		if (get_post_status($pageID) === FALSE) {
 			return FALSE;
@@ -123,21 +123,7 @@ if (! function_exists('pageContainsString')) {
 		return (strpos(get_post($pageID)->post_content, $string) !== FALSE);
 	}
 }
+if (!function_exists( 'legalweb_array_key_first' )) {
+    function legalweb_array_key_first(array $array) { foreach ($array as $key => $value) { return $key; } }
+}
 
-//	if (!function_exists('is_countable')) {
-//		function is_countable($var) { return is_array($var) || $var instanceof Countable || $var instanceof ResourceBundle || $var instanceof SimpleXmlElement; }
-//	}
-//
-//	if (!function_exists('hrtime')) {
-//		require_once __DIR__.'/Php73.php';
-//		p\Php73::$startAt = (int) microtime(true);
-//		function hrtime($asNum = false) { return p\Php73::hrtime($asNum); }
-//	}
-//
-	if (!function_exists('array_key_first')) {
-		function array_key_first(array $array) { foreach ($array as $key => $value) { return $key; } }
-	}
-//
-//	if (!function_exists('array_key_last')) {
-//		function array_key_last(array $array) { end($array); return key($array); }
-//	}

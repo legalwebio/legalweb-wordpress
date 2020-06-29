@@ -18,7 +18,7 @@
  * run function to execute the list of actions and filters.
  *
  */
-class LwWordpressSettings{
+class LegalWebCloudSettings{
 
     public $defaults = array();
 
@@ -76,11 +76,11 @@ class LwWordpressSettings{
 	}
 
 	public static function set($property, $value){
-		return update_option(LwWordpressConstants::OPTIONS_PREFIX.$property, $value);
+		return update_option(LegalWebCloudConstants::OPTIONS_PREFIX.$property, $value);
 	}
 
 	public static function get($property){
-		$value = get_option(LwWordpressConstants::OPTIONS_PREFIX .$property);
+		$value = get_option(LegalWebCloudConstants::OPTIONS_PREFIX .$property);
 
 		if($value !== '0'){
 			if(!$value || empty($value)){
@@ -110,7 +110,7 @@ class LwWordpressSettings{
         $all_options = wp_load_alloptions();
         $my_options = array();
         foreach( $all_options as $name => $value ) {
-            if(strpos($name,LwWordpressConstants::OPTIONS_PREFIX) !== false) {
+            if(strpos($name,LegalWebCloudConstants::OPTIONS_PREFIX) !== false) {
                 if($value !== '0'){
                     if(!$value || empty($value)){
 
@@ -133,10 +133,10 @@ class LwWordpressSettings{
 
                     }
                 }
-                $my_options[str_replace(LwWordpressConstants::OPTIONS_PREFIX,'', $name)] = $value;
+                $my_options[str_replace(LegalWebCloudConstants::OPTIONS_PREFIX,'', $name)] = $value;
             }
         }
-        return array_merge(LwWordpressConstants::getInstance()->defaults, $my_options);
+        return array_merge(LegalWebCloudConstants::getInstance()->defaults, $my_options);
     }
 
 	public function __get($property){

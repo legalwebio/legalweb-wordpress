@@ -1,6 +1,6 @@
 <?php
 
-class LwWordpressCommonSettingsTab extends LwWordpressAdminTab{
+class LegalWebCloudCommonSettingsTab extends LegalWebCloudAdminTab{
 
     public $title = 'Common Settings';
     public $slug = 'common-settings';
