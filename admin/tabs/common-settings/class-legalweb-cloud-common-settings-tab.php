@@ -9,7 +9,7 @@ class LegalWebCloudCommonSettingsTab extends LegalWebCloudAdminTab{
     public function __construct()
     {
 
-	    $this->title = __('Common Settings','lw-affilaite');
+	    $this->title = __('Common Settings','legalweb-cloud');
     }
 
     public function page(){

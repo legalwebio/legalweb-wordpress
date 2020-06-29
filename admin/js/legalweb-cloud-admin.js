@@ -31,7 +31,7 @@ var lwWordpressActiveAdminSubmenu = '';
         $('.legalweb-cloud-admin-message').on('click tap', function() {
 
             $.post( args.ajaxUrl, {
-                action: 'lw-notice-action',
+                action: 'legalweb-notice-action',
                 id: (this).getAttribute('data-msgId')
             });
 

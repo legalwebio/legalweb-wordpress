@@ -82,12 +82,12 @@ $hasCheckout =  $apiData != null && $apiData->services != null && isset($apiData
                 </div>
                 <div class="form-group">
 					<?php if ( $privacyPolicyPage == '0' ): ?>
-                        <small><?php _e( 'Create a page that uses the shortcode <code>[lw-privacypolicy]</code>.', 'legalweb-cloud' ) ?>
+                        <small><?php _e( 'Create a page that uses the shortcode <code>[legalweb-privacypolicy]</code>.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= LegalWebCloudCreatePageAction::url( array( 'privacy_policy_page' => '1' ) ) ?>"><?php _e( 'Create page', 'legalweb-cloud' ) ?></a>
                         </small>
-					<?php elseif ( ! legalwebPageContainsString( $privacyPolicyPage, 'lw-privacypolicy' ) ): ?>
-                        <small><?php _e( 'Attention: The shortcode <code>[lw-privacypolicy]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
+					<?php elseif ( ! legalwebPageContainsString( $privacyPolicyPage, 'legalweb-privacypolicy' ) ): ?>
+                        <small><?php _e( 'Attention: The shortcode <code>[legalweb-privacypolicy]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block" target="_blank"
                                href="<?= get_edit_post_link( $privacyPolicyPage ) ?>"><?php _e( 'Edit page', 'legalweb-cloud' ) ?></a>
                         </small>
@@ -133,12 +133,12 @@ $hasCheckout =  $apiData != null && $apiData->services != null && isset($apiData
                 </div>
                 <div class="form-group">
 					<?php if ( $imprintPage == '0' ): ?>
-                        <small><?php _e( 'Create a page that uses the shortcode <code>[lw-imprint]</code>.', 'legalweb-cloud' ) ?>
+                        <small><?php _e( 'Create a page that uses the shortcode <code>[legalweb-imprint]</code>.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= LegalWebCloudCreatePageAction::url( array( 'imprint_page' => '1' ) ) ?>"><?php _e( 'Create page', 'legalweb-cloud' ) ?></a>
                         </small>
-					<?php elseif ( ! legalwebPageContainsString( $imprintPage, 'lw-imprint' ) ): ?>
-                        <small><?php _e( 'Attention: The shortcode <code>[lw-imprint]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
+					<?php elseif ( ! legalwebPageContainsString( $imprintPage, 'legalweb-imprint' ) ): ?>
+                        <small><?php _e( 'Attention: The shortcode <code>[legalweb-imprint]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= get_edit_post_link( $imprintPage ) ?>"><?php _e( 'Edit page', 'legalweb-cloud' ) ?></a>
                         </small>
@@ -183,12 +183,12 @@ $hasCheckout =  $apiData != null && $apiData->services != null && isset($apiData
                 </div>
                 <div class="form-group">
 					<?php if ( $termsPage == '0' ): ?>
-                        <small><?php _e( 'Create a page that uses the shortcode <code>[lw-contractterms]</code>.', 'legalweb-cloud' ) ?>
+                        <small><?php _e( 'Create a page that uses the shortcode <code>[legalweb-contractterms]</code>.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= LegalWebCloudCreatePageAction::url( array( 'terms_page' => '1' ) ) ?>"><?php _e( 'Create page', 'legalweb-cloud' ) ?></a>
                         </small>
-					<?php elseif ( ! legalwebPageContainsString( $termsPage, 'lw-contractterms' ) ): ?>
-                        <small><?php _e( 'Attention: The shortcode <code>[lw-contractterms]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
+					<?php elseif ( ! legalwebPageContainsString( $termsPage, 'legalweb-contractterms' ) ): ?>
+                        <small><?php _e( 'Attention: The shortcode <code>[legalweb-contractterms]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= get_edit_post_link( $termsPage ) ?>"><?php _e( 'Edit page', 'legalweb-cloud' ) ?></a>
                         </small>
@@ -233,12 +233,12 @@ $hasCheckout =  $apiData != null && $apiData->services != null && isset($apiData
                 </div>
                 <div class="form-group">
 					<?php if ( $cwPage == '0' ): ?>
-                        <small><?php _e( 'Create a page that uses the shortcode <code>[lw-contractwithdrawal]</code>.', 'legalweb-cloud' ) ?>
+                        <small><?php _e( 'Create a page that uses the shortcode <code>[legalweb-contractwithdrawal]</code>.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= LegalWebCloudCreatePageAction::url( array( 'contract_withdrawal_page' => '1' ) ) ?>"><?php _e( 'Create page', 'legalweb-cloud' ) ?></a>
                         </small>
-					<?php elseif ( ! legalwebPageContainsString( $cwPage, 'lw-contractwithdrawal' ) ): ?>
-                        <small><?php _e( 'Attention: The shortcode <code>[lw-contractwithdrawal]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
+					<?php elseif ( ! legalwebPageContainsString( $cwPage, 'legalweb-contractwithdrawal' ) ): ?>
+                        <small><?php _e( 'Attention: The shortcode <code>[legalweb-contractwithdrawal]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= get_edit_post_link( $cwPage ) ?>"><?php _e( 'Edit page', 'legalweb-cloud' ) ?></a>
                         </small>
@@ -285,12 +285,12 @@ $hasCheckout =  $apiData != null && $apiData->services != null && isset($apiData
                 </div>
                 <div class="form-group">
 					<?php if ( $cwsPage == '0' ): ?>
-                        <small><?php _e( 'Create a page that uses the shortcode <code>[lw-contractwithdrawalservice]</code>.', 'legalweb-cloud' ) ?>
+                        <small><?php _e( 'Create a page that uses the shortcode <code>[legalweb-contractwithdrawalservice]</code>.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= LegalWebCloudCreatePageAction::url( array( 'contract_withdrawal_service_page' => '1' ) ) ?>"><?php _e( 'Create page', 'legalweb-cloud' ) ?></a>
                         </small>
-					<?php elseif ( ! legalwebPageContainsString( $cwsPage, 'lw-contractwithdrawalservice' ) ): ?>
-                        <small><?php _e( 'Attention: The shortcode <code>[lw-contractwithdrawalservice]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
+					<?php elseif ( ! legalwebPageContainsString( $cwsPage, 'legalweb-contractwithdrawalservice' ) ): ?>
+                        <small><?php _e( 'Attention: The shortcode <code>[legalweb-contractwithdrawalservice]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= get_edit_post_link( $cwsPage ) ?>"><?php _e( 'Edit page', 'legalweb-cloud' ) ?></a>
                         </small>
@@ -368,12 +368,12 @@ $hasCheckout =  $apiData != null && $apiData->services != null && isset($apiData
                 </div>
                 <div class="form-group">
 					<?php if ( $cwdPage == '0' ): ?>
-                        <small><?php _e( 'Create a page that uses the shortcode <code>[lw-contractwithdrawaldigital]</code>.', 'legalweb-cloud' ) ?>
+                        <small><?php _e( 'Create a page that uses the shortcode <code>[legalweb-contractwithdrawaldigital]</code>.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= LegalWebCloudCreatePageAction::url( array( 'contract_withdrawal_digital_page' => '1' ) ) ?>"><?php _e( 'Create page', 'legalweb-cloud' ) ?></a>
                         </small>
-					<?php elseif ( ! legalwebPageContainsString( $cwdPage, 'lw-contractwithdrawaldigital' ) ): ?>
-                        <small><?php _e( 'Attention: The shortcode <code>[lw-contractwithdrawalproduct]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
+					<?php elseif ( ! legalwebPageContainsString( $cwdPage, 'legalweb-contractwithdrawaldigital' ) ): ?>
+                        <small><?php _e( 'Attention: The shortcode <code>[legalweb-contractwithdrawalproduct]</code> was not found on the page you selected.', 'legalweb-cloud' ) ?>
                             <a class="btn btn-secondary btn-block"
                                href="<?= get_edit_post_link( $cwdPage ) ?>"><?php _e( 'Edit page', 'legalweb-cloud' ) ?></a>
                         </small>

@@ -1,31 +1,31 @@
 /* bootstrap overrides */
-.lw-aff .breadcrumb
+.legalweb-bs .breadcrumb
 {
     margin-left: 0 !important;
     margin-bottom: 0 !important;
     font-weight: 500 !important;
 }
 
-.lw-aff .card {
+.legalweb-bs .card {
     padding: 0;
 }
-.lw-aff h4.card-title{
+.legalweb-bs h4.card-title{
     margin-bottom: 0;
 }
 
-.lw-aff label {
+.legalweb-bs label {
     font-weight: 500 !important;
 }
 
-.lw-aff .custom-control-label {
+.legalweb-bs .custom-control-label {
     font-weight: 400 !important;
 }
 
-.lw-aff select
+.legalweb-bs select
 {
     max-width: initial;
 }
 
-.lw-aff li.nav-item:before {
+.legalweb-bs li.nav-item:before {
     background: none !important;
 }

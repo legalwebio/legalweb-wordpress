@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: legalweb-cloud\n"
-"POT-Creation-Date: 2020-06-29 10:40+0200\n"
-"PO-Revision-Date: 2020-06-29 10:40+0200\n"
+"POT-Creation-Date: 2020-06-29 11:47+0200\n"
+"PO-Revision-Date: 2020-06-29 11:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: legalweb\n"
 "Language: de\n"
@@ -100,9 +100,10 @@ msgid "Select"
 msgstr "Wählen"
 
 #: admin/tabs/common-settings/page.php:85
-msgid "Create a page that uses the shortcode <code>[lw-privacypolicy]</code>."
+msgid ""
+"Create a page that uses the shortcode <code>[legalweb-privacypolicy]</code>."
 msgstr ""
-"Erstellt eine Seite die den Shortcode <code>[lw-privacypolicy]</code> "
+"Erstellt eine Seite die den Shortcode <code>[legalweb-privacypolicy]</code> "
 "verwendet."
 
 #: admin/tabs/common-settings/page.php:87
@@ -116,10 +117,10 @@ msgstr "Seite erstellen"
 
 #: admin/tabs/common-settings/page.php:90
 msgid ""
-"Attention: The shortcode <code>[lw-privacypolicy]</code> was not found on "
-"the page you selected."
+"Attention: The shortcode <code>[legalweb-privacypolicy]</code> was not found "
+"on the page you selected."
 msgstr ""
-"Achtung: Der Shortcode <code>[lw-privacypolicy]</code> wurde auf der "
+"Achtung: Der Shortcode <code>[legalweb-privacypolicy]</code> wurde auf der "
 "gewählten Seite nicht gefunden."
 
 #: admin/tabs/common-settings/page.php:92
@@ -169,17 +170,18 @@ msgid "Imprint page"
 msgstr "Impressum Seite"
 
 #: admin/tabs/common-settings/page.php:136
-msgid "Create a page that uses the shortcode <code>[lw-imprint]</code>."
+msgid "Create a page that uses the shortcode <code>[legalweb-imprint]</code>."
 msgstr ""
-"Erstellt eine Seite die den Shortcode <code>[lw-imprint]</code> verwendet."
+"Erstellt eine Seite die den Shortcode <code>[legalweb-imprint]</code> "
+"verwendet."
 
 #: admin/tabs/common-settings/page.php:141
 msgid ""
-"Attention: The shortcode <code>[lw-imprint]</code> was not found on the page "
-"you selected."
+"Attention: The shortcode <code>[legalweb-imprint]</code> was not found on "
+"the page you selected."
 msgstr ""
-"Achtung: Der Shortcode <code>[lw-imprint]</code> wurde auf der gewählten "
-"Seite nicht gefunden."
+"Achtung: Der Shortcode <code>[legalweb-imprint]</code> wurde auf der "
+"gewählten Seite nicht gefunden."
 
 #: admin/tabs/common-settings/page.php:168
 #: includes/class-legalweb-cloud-create-page-action.php:22
@@ -191,17 +193,18 @@ msgid "Terms page"
 msgstr "AGB Seite"
 
 #: admin/tabs/common-settings/page.php:186
-msgid "Create a page that uses the shortcode <code>[lw-contractterms]</code>."
+msgid ""
+"Create a page that uses the shortcode <code>[legalweb-contractterms]</code>."
 msgstr ""
-"Erstellt eine Seite die den Shortcode <code>[lw-contractterms]</code> "
+"Erstellt eine Seite die den Shortcode <code>[legalweb-contractterms]</code> "
 "verwendet."
 
 #: admin/tabs/common-settings/page.php:191
 msgid ""
-"Attention: The shortcode <code>[lw-contractterms]</code> was not found on "
-"the page you selected."
+"Attention: The shortcode <code>[legalweb-contractterms]</code> was not found "
+"on the page you selected."
 msgstr ""
-"Achtung: Der Shortcode <code>[lw-contractterms]</code> wurde auf der "
+"Achtung: Der Shortcode <code>[legalweb-contractterms]</code> wurde auf der "
 "gewählten Seite nicht gefunden."
 
 #: admin/tabs/common-settings/page.php:218
@@ -214,18 +217,19 @@ msgstr "Widerrufsbelehrung Seite"
 
 #: admin/tabs/common-settings/page.php:236
 msgid ""
-"Create a page that uses the shortcode <code>[lw-contractwithdrawal]</code>."
+"Create a page that uses the shortcode <code>[legalweb-contractwithdrawal]</"
+"code>."
 msgstr ""
-"Erstellt eine Seite die den Shortcode <code>[lw-contractwithdrawal]</code> "
-"verwendet."
+"Erstellt eine Seite die den Shortcode <code>[legalweb-contractwithdrawal]</"
+"code> verwendet."
 
 #: admin/tabs/common-settings/page.php:241
 msgid ""
-"Attention: The shortcode <code>[lw-contractwithdrawal]</code> was not found "
-"on the page you selected."
+"Attention: The shortcode <code>[legalweb-contractwithdrawal]</code> was not "
+"found on the page you selected."
 msgstr ""
-"Achtung: Der Shortcode <code>[lw-contractwithdrawal]</code> wurde auf der "
-"gewählten Seite nicht gefunden."
+"Achtung: Der Shortcode <code>[legalweb-contractwithdrawal]</code> wurde auf "
+"der gewählten Seite nicht gefunden."
 
 #: admin/tabs/common-settings/page.php:270
 #: admin/tabs/common-settings/page.php:315
@@ -238,19 +242,19 @@ msgstr "Widerrufsbelehrung (Dienstleistungen) Seite"
 
 #: admin/tabs/common-settings/page.php:288
 msgid ""
-"Create a page that uses the shortcode <code>[lw-contractwithdrawalservice]</"
-"code>."
+"Create a page that uses the shortcode <code>[legalweb-"
+"contractwithdrawalservice]</code>."
 msgstr ""
-"Erstellt eine Seite die den Shortcode <code>[lw-contractwithdrawalservice]</"
-"code> verwendet."
+"Erstellt eine Seite die den Shortcode <code>[legalweb-"
+"contractwithdrawalservice]</code> verwendet."
 
 #: admin/tabs/common-settings/page.php:293
 msgid ""
-"Attention: The shortcode <code>[lw-contractwithdrawalservice]</code> was not "
-"found on the page you selected."
+"Attention: The shortcode <code>[legalweb-contractwithdrawalservice]</code> "
+"was not found on the page you selected."
 msgstr ""
-"Achtung: Der Shortcode <code>[lw-contractwithdrawalservice]</code> wurde auf "
-"der gewählten Seite nicht gefunden."
+"Achtung: Der Shortcode <code>[legalweb-contractwithdrawalservice]</code> "
+"wurde auf der gewählten Seite nicht gefunden."
 
 #: admin/tabs/common-settings/page.php:324
 #: admin/tabs/common-settings/page.php:407
@@ -282,19 +286,19 @@ msgstr "Widerrufsbelehrung (Digitale Produkte) Seite"
 
 #: admin/tabs/common-settings/page.php:371
 msgid ""
-"Create a page that uses the shortcode <code>[lw-contractwithdrawaldigital]</"
-"code>."
+"Create a page that uses the shortcode <code>[legalweb-"
+"contractwithdrawaldigital]</code>."
 msgstr ""
-"Erstellt eine Seite die den Shortcode <code>[lw-contractwithdrawaldigital]</"
-"code> verwendet."
+"Erstellt eine Seite die den Shortcode <code>[legalweb-"
+"contractwithdrawaldigital]</code> verwendet."
 
 #: admin/tabs/common-settings/page.php:376
 msgid ""
-"Attention: The shortcode <code>[lw-contractwithdrawalproduct]</code> was not "
-"found on the page you selected."
+"Attention: The shortcode <code>[legalweb-contractwithdrawalproduct]</code> "
+"was not found on the page you selected."
 msgstr ""
-"Achtung: Der Shortcode <code>[lw-contractwithdrawalproduct]</code> wurde auf "
-"der gewählten Seite nicht gefunden."
+"Achtung: Der Shortcode <code>[legalweb-contractwithdrawalproduct]</code> "
+"wurde auf der gewählten Seite nicht gefunden."
 
 #: admin/tabs/common-settings/page.php:437
 msgid "Version"

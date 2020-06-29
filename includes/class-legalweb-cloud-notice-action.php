@@ -2,7 +2,7 @@
 
 Class LegalWebCloudNoticeAction extends LegalWebCloudAjaxAction{
 
-    protected $action = 'lw-notice-action';
+    protected $action = 'legalweb-notice-action';
 
     protected function run(){
        
