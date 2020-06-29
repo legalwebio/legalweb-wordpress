@@ -1,6 +1,6 @@
 <div class="wrap"></div>
 
-<div class="lw-aff" style="padding-right: 15px">
+<div class="legalweb-bs" style="padding-right: 15px">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-2 text-white">
         <a class="navbar-brand" href="#">
             <img src="<?php echo LegalWebCloud::pluginURI('public\images\legalwebio-logo-icon-white.svg'); ?>" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -15,7 +15,7 @@
         </ol>
     </nav>
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 container-fluid lw-aff-content-container">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 container-fluid legalweb-bs-content-container">
             <?php
 
             if (isset($tabs[$tab])) {
