@@ -89,6 +89,7 @@ class LegalWebCloud
 	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-withdrawal-service-shortcode.php'),
 	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-withdrawal-digital-shortcode.php'),
 	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-terms-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-seal-shortcode.php'),
 
 	        LegalWebCloud::pluginDir('public/class-legalweb-cloud-public.php'),
 

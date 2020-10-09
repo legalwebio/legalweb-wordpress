@@ -29,3 +29,8 @@
 .legalweb-bs li.nav-item:before {
     background: none !important;
 }
+
+.legalweb-imprint p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

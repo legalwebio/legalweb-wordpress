@@ -47,21 +47,25 @@ class LegalWebCloudApiAction extends LegalWebCloudAjaxAction {
 			$requestData = json_decode($request->body);
 
 			if ($requestData != null) {
+				/*
 				if (LegalWebCloudSettings::get('api_data_version') !=  $requestData->lw_api->version ||
 				    LegalWebCloudSettings::get('api_data_guid') !=  $licenceKey
 				) // only store if version differs
 				{
+				*/
 					LegalWebCloudSettings::set( 'api_data', $request->body );
 					LegalWebCloudSettings::set( 'api_data_date', date( "D M d, Y G:i" ) );
 					LegalWebCloudSettings::set( 'api_data_version', $requestData->lw_api->version );
 					LegalWebCloudSettings::set( 'api_data_guid', $licenceKey );
 
 					return $requestData;
+					/*
 				} else
 				{
 					$apiDataString = LegalWebCloudSettings::get( 'api_data');
 					return json_decode($apiDataString);
 				}
+				*/
 			} else {
 				$jsonError = json_last_error();
 				error_log('could not deserialize api data. json_error: '.$jsonError);

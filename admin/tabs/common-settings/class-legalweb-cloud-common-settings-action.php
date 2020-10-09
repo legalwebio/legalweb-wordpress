@@ -21,6 +21,11 @@ Class LegalWebCloudCommonSettingsAction extends LegalWebCloudAjaxAction{
 	    LegalWebCloudSettings::set('contract_withdrawal_digital_page', $this->get('contract_withdrawal_digital_page', '0'));
 	    LegalWebCloudSettings::set('popup_enabled', $this->get('popup_enabled', '0'));
 
+	    // seal
+	    LegalWebCloudSettings::set('seal-container-css', $this->get('seal-container-css', ''));
+	    LegalWebCloudSettings::set('seal-container-style', $this->get('seal-container-style', ''));
+	    LegalWebCloudSettings::set('seal-img-style', $this->get('seal-img-style', ''));
+
 	    if ($oldLicenseKey != LegalWebCloudSettings::get( 'license_number' ))
 	    {
 		    (new LegalWebCloudApiAction())->refreshApiData();

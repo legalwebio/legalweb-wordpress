@@ -32,9 +32,24 @@ class LegalWebCloudPublic
     }
 
 	public function writeHeaderScripts()
-	{
+    {
+	    if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
+	    $apiData = (new LegalWebCloudApiAction())->getOrLoadApiData();
 
-
+        // write popup scripts
+		if ( $apiData != null &&
+		     isset($apiData->services) &&
+		     isset($apiData->services->dppopupjs) &&
+		     isset($apiData->services->dppopupconfig->spDsgvoGeneralConfig) &&
+		     isset($apiData->services->dppopupconfig->spDsgvoIntegrationConfig)) {
+			?>
+            <script>
+                var spDsgvoGeneralConfig = JSON.parse('<?php echo json_encode( $apiData->services->dppopupconfig->spDsgvoGeneralConfig ); ?>');
+                var spDsgvoIntegrationConfig = JSON.parse('<?php echo json_encode( $apiData->services->dppopupconfig->spDsgvoIntegrationConfig ); ?>');
+				<?= $apiData->services->dppopupjs; ?>
+            </script>
+			<?php
+		}
 	}
 
 	public function writeBodyStartScripts()
@@ -52,6 +67,8 @@ class LegalWebCloudPublic
 		$apiData = (new LegalWebCloudApiAction())->getOrLoadApiData();
 
 		try {
+
+		    echo '<!--noptimize-->';
 
 			// write popup styles
 			if ( $apiData != null &&
@@ -72,21 +89,9 @@ class LegalWebCloudPublic
 				echo $apiData->services->dppopup->{$locale};
 			}
 
-			// write popup scripts
-			if ( $apiData != null &&
-			      isset($apiData->services) &&
-				  isset($apiData->services->dppopupjs) &&
-			      isset($apiData->services->dppopupconfig->spDsgvoGeneralConfig) &&
-			      isset($apiData->services->dppopupconfig->spDsgvoIntegrationConfig)) {
-		?>
-			<script>
-			    var spDsgvoGeneralConfig = JSON.parse('<?php echo json_encode($apiData->services->dppopupconfig->spDsgvoGeneralConfig); ?>');
-			    var spDsgvoIntegrationConfig = JSON.parse('<?php echo json_encode($apiData->services->dppopupconfig->spDsgvoIntegrationConfig); ?>');
-                <?= $apiData->services->dppopupjs; ?>
-             </script>;
-		<?php
-            }
 
+
+			echo '<!--/noptimize-->';
 
 
 		} catch (Exception $e)

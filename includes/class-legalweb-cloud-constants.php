@@ -10,6 +10,7 @@ class LegalWebCloudConstants
 
 
 
-	const LW_API_BASE_URL = "https://legalweb.io/api";
+	//const LW_API_BASE_URL = "https://legalweb.io/api";
+	const LW_API_BASE_URL = "http://localhost/legalweb-prod/api";
 
 }
