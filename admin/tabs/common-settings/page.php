@@ -4,14 +4,14 @@
 
 <?php $apiData = ( new LegalWebCloudApiAction() )->getOrLoadApiData();
 
-$hasImprint                   = $apiData != null && $apiData->services != null && isset( $apiData->services->imprint );
-$hasPP                        = $apiData != null && $apiData->services != null && isset( $apiData->services->dpstatement );
-$hasTerms                     = $apiData != null && $apiData->services != null && isset( $apiData->services->contractterms );
-$hasContractWithdrawal        = $apiData != null && $apiData->services != null && isset( $apiData->services->contractwithdrawal );
-$hasContractWithdrawalService = $apiData != null && $apiData->services != null && isset( $apiData->services->contractwithdrawalservice );
-$hasContractWithdrawalDigital = $apiData != null && $apiData->services != null && isset( $apiData->services->contractwithdrawaldigital );
-$hasCheckout                  = $apiData != null && $apiData->services != null && isset( $apiData->services->contractcheckout );
-$hasSeal                      = $apiData != null && $apiData->services != null && isset( $apiData->services->guetesiegel );
+$hasImprint                   = $apiData != null && isset($apiData->services) && $apiData->services != null && isset( $apiData->services->imprint );
+$hasPP                        = $apiData != null && isset($apiData->services) && $apiData->services != null && isset( $apiData->services->dpstatement );
+$hasTerms                     = $apiData != null && isset($apiData->services) && $apiData->services != null && isset( $apiData->services->contractterms );
+$hasContractWithdrawal        = $apiData != null && isset($apiData->services) && $apiData->services != null && isset( $apiData->services->contractwithdrawal );
+$hasContractWithdrawalService = $apiData != null && isset($apiData->services) && $apiData->services != null && isset( $apiData->services->contractwithdrawalservice );
+$hasContractWithdrawalDigital = $apiData != null && isset($apiData->services) && $apiData->services != null && isset( $apiData->services->contractwithdrawaldigital );
+$hasCheckout                  = $apiData != null && isset($apiData->services) && $apiData->services != null && isset( $apiData->services->contractcheckout );
+$hasSeal                      = $apiData != null && isset($apiData->services) && $apiData->services != null && isset( $apiData->services->guetesiegel );
 ?>
 
 <div class="card-columns">
@@ -303,12 +303,12 @@ $hasSeal                      = $apiData != null && $apiData->services != null &
                 </div>
                 <div class="card-body">
 
-					<?php $array = json_decode( json_encode( $apiData->services->contracttermsservice ), true ); ?>
+					<?php $array = json_decode( json_encode( $apiData->services->contractwithdrawalservice ), true ); ?>
 					<?php foreach ( $array as $key => $content ): ?>
                         <div class="form-group">
 							<?php
 							legalwebWriteInput( 'textarea', '', 'contracttermsservice-' . $key, $content,
-								__( 'Content in language code for: ', 'shapepress-dsgvo' ) . $key,
+								__( 'Content in language code for: ', 'legalweb-cloud' ) . $key,
 								'',
 								'' );
 							?>
@@ -387,12 +387,12 @@ $hasSeal                      = $apiData != null && $apiData->services != null &
                 </div>
                 <div class="card-body">
 
-					<?php $array = json_decode( json_encode( $apiData->services->contracttermsdigital ), true ); ?>
+					<?php $array = json_decode( json_encode( $apiData->services->contractwithdrawaldigital ), true ); ?>
 					<?php foreach ( $array as $key => $content ): ?>
                         <div class="form-group">
 							<?php
 							legalwebWriteInput( 'textarea', '', 'contracttermsdigital-' . $key, $content,
-								__( 'Content in language code for: ', 'shapepress-dsgvo' ) . $key,
+								__( 'Content in language code for: ', 'legalweb-cloud' ) . $key,
 								'',
 								'' );
 							?>

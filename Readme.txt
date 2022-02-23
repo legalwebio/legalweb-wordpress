@@ -3,7 +3,7 @@ Contributors: legalweb
 Donate link: https://legalweb.io
 Tags: wordpress
 Requires at least: 3.0.1
-Tested up to: 5.6.0
+Tested up to: 5.9.0
 Stable tag: 1.0.4
 Requires PHP: 5.6.0
 License: GPLv2 or later
@@ -85,6 +85,9 @@ Just install via wordpress plugin feature or upload zip and activate it.
 == Screenshots ==
 
 == Changelog ==
+= 1.0.5 =
+* small bug fixes
+
 = 1.0.4 =
 * added the shortcode to display legal web seals
 * some improvements

@@ -137,7 +137,7 @@ class LegalWebCloudAdmin
 						$class = 'notice notice-warning is-dismissible legalweb-cloud-admin-message legalweb-cloud-admin-message'.$messageItem->id;
 						$message = $messageItem->msg;
 
-						printf( '<div class="%1$s" data-msgId="'.$messageItem->id.'"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
+						//printf( '<div class="%1$s" data-msgId="'.$messageItem->id.'"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );
 					}
 				}
 

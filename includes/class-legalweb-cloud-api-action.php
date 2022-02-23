@@ -90,7 +90,7 @@ class LegalWebCloudApiAction extends LegalWebCloudAjaxAction {
 		if ($apiData != null) return $apiData;
 
 		// try to refetch if derserialization has failed
-		return $this->$this->refreshApiData();
+		return $this->refreshApiData();
 
 	}
 }
