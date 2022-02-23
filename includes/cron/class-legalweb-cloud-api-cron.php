@@ -3,9 +3,7 @@
 Class LegalWebCloudApiCron extends LegalWebCloudCron{
 
     public $interval = array(
-        'days'     => 1,
-        'weeks'     => 1,
-        'months'     => 1
+        'days'     => 1
     );
 
     public function handle(){

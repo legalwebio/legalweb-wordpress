@@ -74,8 +74,13 @@ Class LegalWebCloudCron{
 		$class = get_called_class();
 		$self  = new $class;
 		$slug  = $self->slug();
+		$interval = $self->calculateInterval();
 
 		add_filter('cron_schedules', array($self, 'scheduleFilter'));
+
+		if(wp_next_scheduled($slug) > (time()+$interval)){
+			wp_clear_scheduled_hook($slug);
+		}
 
 		if(!wp_next_scheduled($slug)){
 		    wp_schedule_event(time(), $self->schedule(), $slug);
