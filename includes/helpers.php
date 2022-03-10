@@ -127,3 +127,21 @@ if (!function_exists( 'legalweb_array_key_first' )) {
     function legalweb_array_key_first(array $array) { foreach ($array as $key => $value) { return $key; } }
 }
 
+/**
+ * Recursive sanitation for an array
+ * @param $array
+ * @return mixed
+ */
+if (! function_exists('legalweb_recursive_sanitize_text_field')) {
+	function legalweb_recursive_sanitize_text_field( $array ) {
+		foreach ( $array as $key => &$value ) {
+			if ( is_array( $value ) ) {
+				$value = legalweb_recursive_sanitize_text_field( $value );
+			} else {
+				$value = sanitize_text_field( $value );
+			}
+		}
+
+		return $array;
+	}
+}

@@ -79,6 +79,7 @@ class LegalWebCloud
 	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-api-action.php'),
 	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-notice-action.php'),
 	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-cron.php'),
+	        LegalWebCloud::pluginDir('includes/class-legalweb-cloud-embeddings-manager.php'),
 	        LegalWebCloud::pluginDir('includes/cron/class-legalweb-cloud-api-cron.php'),
 
 	        // SHORTCODES
@@ -90,6 +91,7 @@ class LegalWebCloud
 	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-withdrawal-digital-shortcode.php'),
 	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-contract-terms-shortcode.php'),
 	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-seal-shortcode.php'),
+	        LegalWebCloud::pluginDir('includes/shortcodes/class-legalweb-cloud-content-block-shortcode.php'),
 
 	        LegalWebCloud::pluginDir('public/class-legalweb-cloud-public.php'),
 
@@ -135,6 +137,11 @@ class LegalWebCloud
 	    $this->loader->add_action('wp_body_open', $public, 'writeBodyStartScripts');
 
 	    $this->loader->add_action( 'rest_api_init',$public , 'registerLwCallbackEndpoint');
+
+	    $this->loader->add_filter('the_content', LegalWebCloudEmbeddingsManager::getInstance(), 'findAndProcessIframes', 50, 1);
+	    $this->loader->add_filter('widget_text_content', LegalWebCloudEmbeddingsManager::getInstance(), 'findAndProcessIframes', 50, 1);
+	    $this->loader->add_filter('widget_custom_html_content', LegalWebCloudEmbeddingsManager::getInstance(), 'findAndProcessIframes', 50, 1);
+	    $this->loader->add_filter('embed_oembed_html', LegalWebCloudEmbeddingsManager::getInstance(), 'findAndProcessOembeds', 50, 2);
     }
 
     /**
