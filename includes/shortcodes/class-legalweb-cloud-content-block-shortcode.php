@@ -45,7 +45,7 @@ function LegalWebCloudContentBlockShortcode($atts, $content){
 		$originalContentBase64Encoded = base64_encode(($content)); //htmlentities
 		$lang = LegalWebCloudLanguageTools::getInstance()->getCurrentLanguageCode();
 		$lang = substr( $lang, 0, 2 );
-		$placeholderHtml = base64_decode($integrationToBlock->placeholders->{$lang});
+		$placeholderHtml = isset($integrationToBlock->placeholders->{$lang}) ? base64_decode($integrationToBlock->placeholders->{$lang}) : $integrationToBlock->placeholder;
 		$placeholderHtml = str_replace("{encodedContent}", $originalContentBase64Encoded, $placeholderHtml);
 		$content = $placeholderHtml;
 		$customCssClasses = ''; //SPDSGVOSettings::get('embed_placeholder_custom_css_classes');

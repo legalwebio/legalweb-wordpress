@@ -16,7 +16,8 @@ class LegalWebCloudPublic
      */
     public function enqueue_styles()
     {
-        wp_enqueue_style(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'css/legalweb-cloud-public.css', array(), legalweb_cloud_VERSION, 'all');
+        // at the momoment we dont need a css
+        //wp_enqueue_style(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'css/legalweb-cloud-public.css', array(), legalweb_cloud_VERSION, 'all');
     }
 
     /**
@@ -26,9 +27,12 @@ class LegalWebCloudPublic
      */
     public function enqueue_scripts()
     {
-        wp_enqueue_script(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'js/legalweb-cloud-public.js', array(
-            'jquery'
-        ), legalweb_cloud_VERSION, false);
+	    // at the momoment we dont need a js
+	    /*
+		wp_enqueue_script(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'js/legalweb-cloud-public.js', array(
+			'jquery'
+		), legalweb_cloud_VERSION, false);
+		*/
     }
 
 	public function writeHeaderScripts()
