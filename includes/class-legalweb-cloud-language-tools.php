@@ -36,6 +36,7 @@ class LegalWebCloudLanguageTools
             if (substr( $locale, 0, 2 ) === 'en') $locale = 'en_EN';
             if (substr( $locale, 0, 2 ) === 'fr') $locale = 'fr_FR';
             if (substr( $locale, 0, 2 ) === 'it') $locale = 'it_IT';
+	        if (substr( $locale, 0, 2 ) === 'es') $locale = 'es_ES';
             if ($locale === "") $locale = "en_EN";
             return $locale;
         } catch (Exception $e) {
@@ -50,11 +51,16 @@ class LegalWebCloudLanguageTools
 
     public function getTypeOfLanguagePlugin()
     {
+		/*
         if ((defined('ICL_LANGUAGE_CODE') || defined('POLYLANG_FILE')) == false) return 'none';
         else {
             if(function_exists('icl_get_languages')) return 'wpml';
             if(function_exists('pll_current_language')) return 'polylang';
         }
+		*/
+	    if (function_exists('icl_get_languages')) return 'wpml';
+	    if (function_exists('pll_current_language')) return 'polylang';
+	    if (class_exists( 'TRP_Translate_Press' )) return 'translatepress';
 
         return "none";
     }
@@ -75,6 +81,9 @@ class LegalWebCloudLanguageTools
                     $currentLanguage = pll_default_language();
                 }
                 break;
+	        case "translatepress":
+		        $currentLanguage = get_locale();
+				break;
             case "none":
                 $currentLanguage = $this->defaultLanguage;
                 break;
