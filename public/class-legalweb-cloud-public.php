@@ -38,6 +38,7 @@ class LegalWebCloudPublic
 	public function writeHeaderScripts()
     {
 	    if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
+	    if (is_admin() || current_user_can( 'administrator' )) return;
 	    $apiData = (new LegalWebCloudApiAction())->getOrLoadApiData();
 
         // write popup scripts
@@ -65,6 +66,7 @@ class LegalWebCloudPublic
 	public function writeFooterScripts() {
 
         if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
+		if (is_admin() || current_user_can( 'administrator' )) return;
 
 		$locale = LegalWebCloudLanguageTools::getInstance()->getCurrentLanguageCode();
 		$locale = substr( $locale, 0, 2 );

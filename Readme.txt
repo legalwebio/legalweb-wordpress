@@ -3,8 +3,8 @@ Contributors: legalweb
 Donate link: https://legalweb.io
 Tags: wordpress
 Requires at least: 3.0.1
-Tested up to: 5.9.3
-Stable tag: 1.0.7
+Tested up to: 6.1.1
+Stable tag: 1.1.0
 Requires PHP: 5.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -90,6 +90,10 @@ Just install via wordpress plugin feature or upload zip and activate it.
 == Screenshots ==
 
 == Changelog ==
+= 1.1.0 =
+* PHP 8.1
+* improved theme builder support
+
 = 1.0.8 =
 * improved embedding blocking
 

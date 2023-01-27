@@ -11,7 +11,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#"><?php _e('LegalWeb Cloud', 'legalweb-cloud'); ?></a></li>
-            <li class="breadcrumb-item active" aria-current="page"><?= __($tabs[$tab]->getTabTitle(),'legalweb-cloud');;?></li>
+            <li class="breadcrumb-item active" aria-current="page"><?= isset($tab) &&isset($tabs[$tab]) ? __($tabs[$tab]->getTabTitle(),'legalweb-cloud') :'';?></li>
         </ol>
     </nav>
     <div class="row">

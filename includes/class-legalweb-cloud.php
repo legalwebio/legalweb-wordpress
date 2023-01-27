@@ -161,7 +161,7 @@ class LegalWebCloud
      * @return    string    The name of the plugin.
      */
     public function get_legalweb_cloud() {
-        return lw_aff_NAME;
+        return legalweb_cloud_NAME;
     }
 
     /**

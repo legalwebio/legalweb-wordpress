@@ -51,6 +51,7 @@ class LegalWebCloudEmbeddingsManager
 	public function findAndProcessIframes($content)
 	{
 		if (is_admin()) return $content;
+		//if (function_exists('is_et_pb_preview') && is_et_pb_preview()) return $content;
 
 		$content = preg_replace_callback('/(\<p\>)?(<iframe.+?(?=<\/iframe>)<\/iframe>){1}(\<\/p\>)?/i', [$this, 'processIframe'], $content);
 		return $content;
