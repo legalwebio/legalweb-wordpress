@@ -38,7 +38,10 @@ class LegalWebCloudPublic
 	public function writeHeaderScripts()
     {
 	    if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
-	    if (is_admin() || current_user_can( 'administrator' )) return;
+	    $user = wp_get_current_user();
+	    $allowed_roles = array( 'editor', 'administrator', 'author', 'contributor' );
+	   // if (is_admin() || current_user_can( 'administrator' )) return;
+	    if (is_admin() || ($user != null && array_intersect( $allowed_roles, $user->roles ))) return;
 	    $apiData = (new LegalWebCloudApiAction())->getOrLoadApiData();
 
         // write popup scripts
