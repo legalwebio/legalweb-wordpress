@@ -38,10 +38,7 @@ class LegalWebCloudPublic
 	public function writeHeaderScripts()
     {
 	    if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
-	    $user = wp_get_current_user();
-	    $allowed_roles = array( 'editor', 'administrator', 'author', 'contributor' );
-	   // if (is_admin() || current_user_can( 'administrator' )) return;
-	    if (is_admin() || ($user != null && array_intersect( $allowed_roles, $user->roles ))) return;
+	    if (legalweb_disable_on_backend()) return;
 	    $apiData = (new LegalWebCloudApiAction())->getOrLoadApiData();
 
         // write popup scripts
@@ -69,7 +66,7 @@ class LegalWebCloudPublic
 	public function writeFooterScripts() {
 
         if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
-		if (is_admin() || current_user_can( 'administrator' )) return;
+		if (legalweb_disable_on_backend()) return;
 
 		$locale = LegalWebCloudLanguageTools::getInstance()->getCurrentLanguageCode();
 		$locale = substr( $locale, 0, 2 );

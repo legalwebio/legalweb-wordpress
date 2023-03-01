@@ -145,3 +145,18 @@ if (! function_exists('legalweb_recursive_sanitize_text_field')) {
 		return $array;
 	}
 }
+
+if (!function_exists( 'legalweb_disable_on_backend' )) {
+	function legalweb_disable_on_backend() {
+
+        // we need to disable it when divi is used and we are at backend
+		if ( defined( 'ET_CORE_VERSION' ) ) {
+			$user          = wp_get_current_user();
+			$allowed_roles = array( 'editor', 'administrator', 'author', 'contributor' );
+			if ( is_admin() || ( $user != null && array_intersect( $allowed_roles, $user->roles ) ) ) {
+				return true;
+			}
+		}
+        return false;
+    }
+}
