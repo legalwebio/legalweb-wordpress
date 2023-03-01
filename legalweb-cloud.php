@@ -8,14 +8,14 @@
  *
  * Plugin Name:   LegalWeb Cloud
  * Description:   Wordpress Plugin for GDPR/DSGVO, Imprint & Privacy Policy and other legal texts to use with the legalweb.io cloud service.
- * Version:       1.1.1
+ * Version:       1.1.2
  * Author:        legalweb
  * Author URI:    https://www.legalweb.io
  * License URI:   http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:   legalweb-cloud
 */
 
-define('legalweb_cloud_VERSION', '1.1.1');
+define('legalweb_cloud_VERSION', '1.1.2');
 define('legalweb_cloud_NAME', 'legalweb-cloud');
 define('legalweb_cloud_PLUGIN_NAME', 'legalweb-cloud');
 define('legalweb_cloud_URL', plugin_dir_url( __FILE__ ));

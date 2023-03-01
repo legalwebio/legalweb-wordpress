@@ -92,6 +92,9 @@ Just install via wordpress plugin feature or upload zip and activate it.
 
 == Changelog ==
 = 1.1.1 =
+* bugfix at backend blocking
+
+= 1.1.1 =
 * improved theme builder support
 
 = 1.1.0 =
