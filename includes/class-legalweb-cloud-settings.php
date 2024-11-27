@@ -52,6 +52,7 @@ class LegalWebCloudSettings{
         'api_data_last_refresh_date'        => date('D M d, Y G:i', 0),
 	    'api_data_guid'                     => '',
         'popup_enabled'                     => '0',
+	    'popup_enabled_for_admin'           => '1',
 	);
 
 

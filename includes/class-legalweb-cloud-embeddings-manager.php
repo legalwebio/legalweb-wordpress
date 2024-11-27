@@ -50,7 +50,7 @@ class LegalWebCloudEmbeddingsManager
 
 	public function findAndProcessIframes($content)
 	{
-		if (legalweb_disable_on_backend()) return $content;
+		if ( LegalWebCloudSettings::get( 'popup_enabled_for_admin' ) != '1' && legalweb_disable_on_backend()) return;
 
 		$content = preg_replace_callback('/(\<p\>)?(<iframe.+?(?=<\/iframe>)<\/iframe>){1}(\<\/p\>)?/i', [$this, 'processIframe'], $content);
 		return $content;

@@ -47,7 +47,12 @@ $hasSeal                      = $apiData != null && isset($apiData->services) &&
 					'',
 					__( 'Enables the popup where your visitor can opt-in and opt-out.', 'legalweb-cloud' ) );
 				?>
-
+	            <?php
+	            legalwebWriteInput( 'switch', '', 'popup_enabled_for_admin', LegalWebCloudSettings::get( 'popup_enabled_for_admin' ),
+		            __( 'Enable Popup for Admins & Contributor', 'legalweb-cloud' ),
+		            '',
+		            __( 'Enables the popup for backend user.', 'legalweb-cloud' ) );
+	            ?>
                 <div class="form-group d-flex mb-2">
                     <input type="submit" class="btn btn-primary ml-auto"
                            value="<?= _e( 'Save changes', 'legalweb-cloud' ); ?>"/>

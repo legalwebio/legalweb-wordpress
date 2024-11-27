@@ -20,6 +20,7 @@ Class LegalWebCloudCommonSettingsAction extends LegalWebCloudAjaxAction{
 	    LegalWebCloudSettings::set('contract_withdrawal_service_page', $this->get('contract_withdrawal_service_page', '0'));
 	    LegalWebCloudSettings::set('contract_withdrawal_digital_page', $this->get('contract_withdrawal_digital_page', '0'));
 	    LegalWebCloudSettings::set('popup_enabled', $this->get('popup_enabled', '0'));
+	    LegalWebCloudSettings::set('popup_enabled_for_admin', $this->get('popup_enabled_for_admin', '0'));
 
 	    // seal
 	    LegalWebCloudSettings::set('seal-container-css', $this->get('seal-container-css', ''));

@@ -8,7 +8,7 @@ function LegalWebCloudCookiePopupLinkShortcode($atts){
     ), $atts );
 
 
-    return '<a href="#" class="sp-dsgvo-show-privacy-popup'.$params['class'].'">' . $params['text'] . "</a>";
+    return '<a href="#" class="sp-dsgvo-show-privacy-popup'.esc_attr($params['class']).'">' . esc_html($params['text']) . "</a>";
 }
 
 add_shortcode('legalweb-popup', 'LegalWebCloudCookiePopupLinkShortcode');

@@ -60,7 +60,7 @@ class LegalWebCloudApiAction extends LegalWebCloudAjaxAction {
 					LegalWebCloudSettings::set( 'api_data', $request->body );
 					$timestamp = time();
 					$dt = new DateTime("now", new DateTimeZone($tz)); //first argument "must" be a string
-					$dt->setTimestamp($timestamp); //adjust the object to correct timestamp
+					$dt->setTimestamp($requestData->services->dppopupconfig->spDsgvoGeneralConfig->cookieVersion); //adjust the object to correct timestamp
 					LegalWebCloudSettings::set( 'api_data_date', $dt->format('D M d, Y G:i') );
 					LegalWebCloudSettings::set( 'api_data_version', $requestData->lw_api->version );
 					LegalWebCloudSettings::set( 'api_data_guid', $licenceKey );

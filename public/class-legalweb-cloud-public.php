@@ -38,7 +38,9 @@ class LegalWebCloudPublic
 	public function writeHeaderScripts()
     {
 	    if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
-	    if (legalweb_disable_on_backend()) return;
+	    if ( LegalWebCloudSettings::get( 'popup_enabled_for_admin' ) != '1' && legalweb_disable_on_backend()) return;
+	    if(apply_filters('legalweb_disable_header_scripts', false)) return;
+
 	    $apiData = (new LegalWebCloudApiAction())->getOrLoadApiData();
 
         // write popup scripts
@@ -66,7 +68,10 @@ class LegalWebCloudPublic
 	public function writeFooterScripts() {
 
         if ( LegalWebCloudSettings::get( 'popup_enabled' ) != '1') return;
-		if (legalweb_disable_on_backend()) return;
+		if ( LegalWebCloudSettings::get( 'popup_enabled_for_admin' ) != '1' && legalweb_disable_on_backend()) return;
+		if(apply_filters('legalweb_disable_footer_scripts', false)) return;
+
+
 
 		$locale = LegalWebCloudLanguageTools::getInstance()->getCurrentLanguageCode();
 		$locale = substr( $locale, 0, 2 );
@@ -111,6 +116,7 @@ class LegalWebCloudPublic
 	    register_rest_route( legalweb_cloud_NAME.'/v1', '/callback', array(
 		    'methods' => 'GET',
 		    'callback' =>  array($this, 'lwWordpressCallbackUrlAction'),
+			'permission_callback' => '__return_true'
 	    ) );
     }
 

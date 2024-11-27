@@ -123,7 +123,7 @@ class LegalWebCloudAdmin
 
 		try {
 			if ( $apiData != null &&
-			     isset($apiData->messages) &&
+			     isset($apiData->messages) && is_array($apiData->messages) &&
 			     count($apiData->messages) > 0) {
 
 				$dismissedApiMessages = LegalWebCloudSettings::get('dismissed_api_message_ids');
