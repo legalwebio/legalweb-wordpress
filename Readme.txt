@@ -3,8 +3,8 @@ Contributors: legalweb
 Donate link: https://legalweb.io
 Tags: wordpress
 Requires at least: 3.0.1
-Tested up to: 6.7.1
-Stable tag: 1.1.3
+Tested up to: 6.7.2
+Stable tag: 1.1.4
 Requires PHP: 5.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -52,7 +52,7 @@ We do not use community translations. All translations have been translated by s
 * 4 display types for the cookie selection popup/window (popup, as sidebar, as bottom bar, minimalist-centered popup)
 * Time of display can be selected: when loading the page, by timeout, when scrolling for the first time, user-defined event on the document, manually (it must be displayed by method)
 * Configurable colors, custom CSS, custom Logo, ...
-* JS client side API
+* JS client side API, compatible with WP-CONSENT-API
 
 # **IMPRINT**
 * Automatic creation
@@ -90,6 +90,9 @@ Just install via wordpress plugin feature or upload zip and activate it.
 == Screenshots ==
 
 == Changelog ==
+= 1.1.4 =
+* added support for wp-consent-api
+
 = 1.1.3 =
 * option for backend blocking
 * securtiy fix
