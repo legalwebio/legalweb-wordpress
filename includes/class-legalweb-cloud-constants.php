@@ -14,4 +14,10 @@ class LegalWebCloudConstants
 	//const LW_API_BASE_URL = "http://localhost/legalweb-prod/api";
 
 	const CATEGORY_SLUG_EMBEDDINGS = 'contents_embedds';
+
+	const WP_CONSENT_TYPE_STATISTICS = 'statistics';
+	const WP_CONSENT_TYPE_STATISTICS_ANONYMOUS = 'statistics-anonymous';
+	const WP_CONSENT_TYPE_MARKETING = 'marketing';
+	const WP_CONSENT_TYPE_FUNCTIONAL = 'functional';
+	const WP_CONSENT_TYPE_PREFERENCES = 'preferences';
 }

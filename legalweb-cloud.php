@@ -56,3 +56,4 @@ function run_legalweb_cloud()
 
 }
 add_action('init', 'run_legalweb_cloud');
+add_filter( "wp_consent_api_registered_legalwebcloud", '__return_true' );

@@ -28,11 +28,11 @@ class LegalWebCloudPublic
     public function enqueue_scripts()
     {
 	    // at the momoment we dont need a js
-	    /*
-		wp_enqueue_script(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'js/legalweb-cloud-public.js', array(
-			'jquery'
-		), legalweb_cloud_VERSION, false);
-		*/
+	    if ($this->lwCheckIfWpConsentApiIsActive()) {
+		    wp_enqueue_script(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'js/legalweb-cloud-public.min.js', array(
+			    'jquery'
+		    ), legalweb_cloud_VERSION, false);
+        }
     }
 
 	public function writeHeaderScripts()
@@ -143,4 +143,20 @@ class LegalWebCloudPublic
 
 		return $response;
     }
+
+	//set the consent type (optin, optout, default false)
+	function lwSetConsenttype($consenttype){
+		return 'optin';
+	}
+
+	function lwCheckIfWpConsentApiIsActive() {
+		return function_exists( 'wp_has_consent' );
+	}
+
+	//filter consent categories types, example: remove the preferences category
+
+	function lwSetWpConsentCategories($consentcategories){
+		unset($consentcategories['preferences']);
+		return $consentcategories;
+	}
 }

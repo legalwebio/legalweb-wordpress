@@ -142,6 +142,10 @@ class LegalWebCloud
 	    $this->loader->add_filter('widget_text_content', LegalWebCloudEmbeddingsManager::getInstance(), 'findAndProcessIframes', 50, 1);
 	    $this->loader->add_filter('widget_custom_html_content', LegalWebCloudEmbeddingsManager::getInstance(), 'findAndProcessIframes', 50, 1);
 	    $this->loader->add_filter('embed_oembed_html', LegalWebCloudEmbeddingsManager::getInstance(), 'findAndProcessOembeds', 50, 2);
+
+		// consent mode api
+	    $this->loader->add_filter( 'wp_get_consent_type', $public, 'lwSetConsenttype' , 10, 1 );
+	    $this->loader->add_filter( 'wp_consent_categories', $public,'lwSetWpConsentCategories' , 10, 1 );
     }
 
     /**
