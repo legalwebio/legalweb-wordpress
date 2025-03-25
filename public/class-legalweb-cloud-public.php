@@ -22,7 +22,7 @@ class LegalWebCloudPublic
 		    $upload_dir = wp_upload_dir();
 		    $custom_dir = $upload_dir['baseurl'] . '/legalweb-cloud';
 		    $file_path = $custom_dir. '/legalweb-cloud-client.css';
-		    wp_enqueue_style(legalweb_cloud_NAME, $file_path, array(), LegalWebCloudSettings::get( 'api_data_version'), 'all');
+		    wp_enqueue_style(legalweb_cloud_NAME, $file_path, array(), strtotime( LegalWebCloudSettings::get( 'api_data_date' )), 'all');
 	    }
     }
 
@@ -38,7 +38,7 @@ class LegalWebCloudPublic
 	        $upload_dir = wp_upload_dir();
 	        $custom_dir = $upload_dir['baseurl'] . '/legalweb-cloud';
 	        $file_path = $custom_dir. '/legalweb-cloud-client.js';
-	        wp_enqueue_script('legalweb-cloud-client', $file_path, array(), LegalWebCloudSettings::get( 'api_data_version'), false);
+	        wp_enqueue_script('legalweb-cloud-client', $file_path, array(), strtotime( LegalWebCloudSettings::get( 'api_data_date' )), false);
         }
 
 	    if ($this->lwCheckIfWpConsentApiIsActive()) {
