@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: legalweb-cloud\n"
-"POT-Creation-Date: 2022-02-23 13:01+0100\n"
-"PO-Revision-Date: 2022-02-23 13:02+0100\n"
+"POT-Creation-Date: 2025-03-25 09:11+0100\n"
+"PO-Revision-Date: 2025-03-25 09:12+0100\n"
 "Last-Translator: \n"
 "Language-Team: legalweb\n"
 "Language: de\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -72,51 +72,67 @@ msgstr ""
 "Aktiviert das Datenschutzpopup mit dem Ihre Besucher ein Opt-In/Opt-Out "
 "durchführen können."
 
-#: admin/tabs/common-settings/page.php:53
-#: admin/tabs/common-settings/page.php:103
-#: admin/tabs/common-settings/page.php:150
-#: admin/tabs/common-settings/page.php:196
-#: admin/tabs/common-settings/page.php:242
-#: admin/tabs/common-settings/page.php:293
-#: admin/tabs/common-settings/page.php:377
-#: admin/tabs/common-settings/page.php:457
+#: admin/tabs/common-settings/page.php:52
+msgid "Enable Popup for Admins & Contributor"
+msgstr "Popup auch für Admins und Redakteure aktivieren"
+
+#: admin/tabs/common-settings/page.php:54
+msgid "Enables the popup for backend user."
+msgstr "Aktiviert das Popup für Backend User."
+
+#: admin/tabs/common-settings/page.php:58
+msgid "Load JS and CSS as resources"
+msgstr "JS und CSS als Ressource einbinden."
+
+#: admin/tabs/common-settings/page.php:60
+msgid "Instead of writing them inline they will be loaded as file resources"
+msgstr "Bindet das JS und CSS als Ressource ein und nicht mehr inline."
+
+#: admin/tabs/common-settings/page.php:64
+#: admin/tabs/common-settings/page.php:114
+#: admin/tabs/common-settings/page.php:161
+#: admin/tabs/common-settings/page.php:207
+#: admin/tabs/common-settings/page.php:253
+#: admin/tabs/common-settings/page.php:304
+#: admin/tabs/common-settings/page.php:388
+#: admin/tabs/common-settings/page.php:468
 msgid "Save changes"
 msgstr "Änderungen speichern"
 
-#: admin/tabs/common-settings/page.php:64
+#: admin/tabs/common-settings/page.php:75
 msgid "Privacy policy"
 msgstr "Datenschutz"
 
-#: admin/tabs/common-settings/page.php:70
+#: admin/tabs/common-settings/page.php:81
 msgid "Privacy policy page"
 msgstr "Datenschutz Seite"
 
-#: admin/tabs/common-settings/page.php:72
-#: admin/tabs/common-settings/page.php:122
-#: admin/tabs/common-settings/page.php:168
-#: admin/tabs/common-settings/page.php:214
-#: admin/tabs/common-settings/page.php:265
-#: admin/tabs/common-settings/page.php:349
+#: admin/tabs/common-settings/page.php:83
+#: admin/tabs/common-settings/page.php:133
+#: admin/tabs/common-settings/page.php:179
+#: admin/tabs/common-settings/page.php:225
+#: admin/tabs/common-settings/page.php:276
+#: admin/tabs/common-settings/page.php:360
 msgid "Select"
 msgstr "Wählen"
 
-#: admin/tabs/common-settings/page.php:84
+#: admin/tabs/common-settings/page.php:95
 msgid ""
 "Create a page that uses the shortcode <code>[legalweb-privacypolicy]</code>."
 msgstr ""
 "Erstellt eine Seite die den Shortcode <code>[legalweb-privacypolicy]</code> "
 "verwendet."
 
-#: admin/tabs/common-settings/page.php:86
-#: admin/tabs/common-settings/page.php:134
-#: admin/tabs/common-settings/page.php:180
-#: admin/tabs/common-settings/page.php:226
-#: admin/tabs/common-settings/page.php:277
-#: admin/tabs/common-settings/page.php:361
+#: admin/tabs/common-settings/page.php:97
+#: admin/tabs/common-settings/page.php:145
+#: admin/tabs/common-settings/page.php:191
+#: admin/tabs/common-settings/page.php:237
+#: admin/tabs/common-settings/page.php:288
+#: admin/tabs/common-settings/page.php:372
 msgid "Create page"
 msgstr "Seite erstellen"
 
-#: admin/tabs/common-settings/page.php:89
+#: admin/tabs/common-settings/page.php:100
 msgid ""
 "Attention: The shortcode <code>[legalweb-privacypolicy]</code> was not found "
 "on the page you selected."
@@ -124,22 +140,22 @@ msgstr ""
 "Achtung: Der Shortcode <code>[legalweb-privacypolicy]</code> wurde auf der "
 "gewählten Seite nicht gefunden."
 
-#: admin/tabs/common-settings/page.php:91
-#: admin/tabs/common-settings/page.php:97
-#: admin/tabs/common-settings/page.php:139
-#: admin/tabs/common-settings/page.php:144
-#: admin/tabs/common-settings/page.php:185
-#: admin/tabs/common-settings/page.php:190
-#: admin/tabs/common-settings/page.php:231
-#: admin/tabs/common-settings/page.php:236
-#: admin/tabs/common-settings/page.php:282
-#: admin/tabs/common-settings/page.php:287
-#: admin/tabs/common-settings/page.php:366
-#: admin/tabs/common-settings/page.php:371
+#: admin/tabs/common-settings/page.php:102
+#: admin/tabs/common-settings/page.php:108
+#: admin/tabs/common-settings/page.php:150
+#: admin/tabs/common-settings/page.php:155
+#: admin/tabs/common-settings/page.php:196
+#: admin/tabs/common-settings/page.php:201
+#: admin/tabs/common-settings/page.php:242
+#: admin/tabs/common-settings/page.php:247
+#: admin/tabs/common-settings/page.php:293
+#: admin/tabs/common-settings/page.php:298
+#: admin/tabs/common-settings/page.php:377
+#: admin/tabs/common-settings/page.php:382
 msgid "Edit page"
 msgstr "Seite bearbeiten"
 
-#: admin/tabs/common-settings/page.php:94
+#: admin/tabs/common-settings/page.php:105
 msgid ""
 "This option also sets the wordpress option for the privacy policy page, "
 "which can be accessed in the menu \"Settings/Privacy\"."
@@ -148,12 +164,12 @@ msgstr ""
 "Datenschutzbestimmungen, welche im Menü \"Einstellungen/Datenschutz\" "
 "konfiguriert werden kann."
 
-#: admin/tabs/common-settings/page.php:95
-#: admin/tabs/common-settings/page.php:142
-#: admin/tabs/common-settings/page.php:188
-#: admin/tabs/common-settings/page.php:234
-#: admin/tabs/common-settings/page.php:285
-#: admin/tabs/common-settings/page.php:369
+#: admin/tabs/common-settings/page.php:106
+#: admin/tabs/common-settings/page.php:153
+#: admin/tabs/common-settings/page.php:199
+#: admin/tabs/common-settings/page.php:245
+#: admin/tabs/common-settings/page.php:296
+#: admin/tabs/common-settings/page.php:380
 msgid ""
 "The page can also by edited and text could be extended by the editing the "
 "selected page with the Wordpress page editor like Gutenberg."
@@ -161,22 +177,22 @@ msgstr ""
 "Diese Seite ist eine normale Wordpress Seite, die mit Ihrem Page Editor (z."
 "B. Gutenberg) genauso bearbeitet werden kann, wie Ihre anderen Seiten."
 
-#: admin/tabs/common-settings/page.php:114
+#: admin/tabs/common-settings/page.php:125
 #: includes/class-legalweb-cloud-create-page-action.php:17
 msgid "Imprint"
 msgstr "Impressum"
 
-#: admin/tabs/common-settings/page.php:120
+#: admin/tabs/common-settings/page.php:131
 msgid "Imprint page"
 msgstr "Impressum Seite"
 
-#: admin/tabs/common-settings/page.php:132
+#: admin/tabs/common-settings/page.php:143
 msgid "Create a page that uses the shortcode <code>[legalweb-imprint]</code>."
 msgstr ""
 "Erstellt eine Seite die den Shortcode <code>[legalweb-imprint]</code> "
 "verwendet."
 
-#: admin/tabs/common-settings/page.php:137
+#: admin/tabs/common-settings/page.php:148
 msgid ""
 "Attention: The shortcode <code>[legalweb-imprint]</code> was not found on "
 "the page you selected."
@@ -184,23 +200,23 @@ msgstr ""
 "Achtung: Der Shortcode <code>[legalweb-imprint]</code> wurde auf der "
 "gewählten Seite nicht gefunden."
 
-#: admin/tabs/common-settings/page.php:160
+#: admin/tabs/common-settings/page.php:171
 #: includes/class-legalweb-cloud-create-page-action.php:22
 msgid "Terms"
 msgstr "AGB"
 
-#: admin/tabs/common-settings/page.php:166
+#: admin/tabs/common-settings/page.php:177
 msgid "Terms page"
 msgstr "AGB Seite"
 
-#: admin/tabs/common-settings/page.php:178
+#: admin/tabs/common-settings/page.php:189
 msgid ""
 "Create a page that uses the shortcode <code>[legalweb-contractterms]</code>."
 msgstr ""
 "Erstellt eine Seite die den Shortcode <code>[legalweb-contractterms]</code> "
 "verwendet."
 
-#: admin/tabs/common-settings/page.php:183
+#: admin/tabs/common-settings/page.php:194
 msgid ""
 "Attention: The shortcode <code>[legalweb-contractterms]</code> was not found "
 "on the page you selected."
@@ -208,15 +224,15 @@ msgstr ""
 "Achtung: Der Shortcode <code>[legalweb-contractterms]</code> wurde auf der "
 "gewählten Seite nicht gefunden."
 
-#: admin/tabs/common-settings/page.php:206
+#: admin/tabs/common-settings/page.php:217
 msgid "Contract  Withdrawal"
 msgstr "Widerrufsbelehrung"
 
-#: admin/tabs/common-settings/page.php:212
+#: admin/tabs/common-settings/page.php:223
 msgid "Contract  withdrawal page"
 msgstr "Widerrufsbelehrung Seite"
 
-#: admin/tabs/common-settings/page.php:224
+#: admin/tabs/common-settings/page.php:235
 msgid ""
 "Create a page that uses the shortcode <code>[legalweb-contractwithdrawal]</"
 "code>."
@@ -224,7 +240,7 @@ msgstr ""
 "Erstellt eine Seite die den Shortcode <code>[legalweb-contractwithdrawal]</"
 "code> verwendet."
 
-#: admin/tabs/common-settings/page.php:229
+#: admin/tabs/common-settings/page.php:240
 msgid ""
 "Attention: The shortcode <code>[legalweb-contractwithdrawal]</code> was not "
 "found on the page you selected."
@@ -232,16 +248,16 @@ msgstr ""
 "Achtung: Der Shortcode <code>[legalweb-contractwithdrawal]</code> wurde auf "
 "der gewählten Seite nicht gefunden."
 
-#: admin/tabs/common-settings/page.php:257
-#: admin/tabs/common-settings/page.php:302
+#: admin/tabs/common-settings/page.php:268
+#: admin/tabs/common-settings/page.php:313
 msgid "Contract  Withdrawal Service"
 msgstr "Widerrufsbelehrung (Dienstleistungen)"
 
-#: admin/tabs/common-settings/page.php:263
+#: admin/tabs/common-settings/page.php:274
 msgid "Contract  withdrawal service page"
 msgstr "Widerrufsbelehrung (Dienstleistungen) Seite"
 
-#: admin/tabs/common-settings/page.php:275
+#: admin/tabs/common-settings/page.php:286
 msgid ""
 "Create a page that uses the shortcode <code>[legalweb-"
 "contractwithdrawalservice]</code>."
@@ -249,7 +265,7 @@ msgstr ""
 "Erstellt eine Seite die den Shortcode <code>[legalweb-"
 "contractwithdrawalservice]</code> verwendet."
 
-#: admin/tabs/common-settings/page.php:280
+#: admin/tabs/common-settings/page.php:291
 msgid ""
 "Attention: The shortcode <code>[legalweb-contractwithdrawalservice]</code> "
 "was not found on the page you selected."
@@ -257,18 +273,18 @@ msgstr ""
 "Achtung: Der Shortcode <code>[legalweb-contractwithdrawalservice]</code> "
 "wurde auf der gewählten Seite nicht gefunden."
 
-#: admin/tabs/common-settings/page.php:311
-#: admin/tabs/common-settings/page.php:395
+#: admin/tabs/common-settings/page.php:322
+#: admin/tabs/common-settings/page.php:406
 msgid "Content in language code for: "
 msgstr "Inhalt in der Sprache: "
 
-#: admin/tabs/common-settings/page.php:319
-#: admin/tabs/common-settings/page.php:403
+#: admin/tabs/common-settings/page.php:330
+#: admin/tabs/common-settings/page.php:414
 msgid "Copy content to clipboard"
 msgstr "Inhalt in die Zwischenablage kopieren"
 
-#: admin/tabs/common-settings/page.php:324
-#: admin/tabs/common-settings/page.php:408
+#: admin/tabs/common-settings/page.php:335
+#: admin/tabs/common-settings/page.php:419
 msgid ""
 "No texts available. You need to finalize the configuration at your legal web "
 "dashboard."
@@ -276,16 +292,16 @@ msgstr ""
 "Es sind derzeit keine Texte verfügbar bzw. konfiguriert. Bitte schließen Sie "
 "ihre Konfiguration im legal web Dashboard ab."
 
-#: admin/tabs/common-settings/page.php:341
-#: admin/tabs/common-settings/page.php:386
+#: admin/tabs/common-settings/page.php:352
+#: admin/tabs/common-settings/page.php:397
 msgid "Contract  Withdrawal Digital"
 msgstr "Widerrufsbelehrung (Digitale Produkte)"
 
-#: admin/tabs/common-settings/page.php:347
+#: admin/tabs/common-settings/page.php:358
 msgid "Contract  withdrawal digital page"
 msgstr "Widerrufsbelehrung (Digitale Produkte) Seite"
 
-#: admin/tabs/common-settings/page.php:359
+#: admin/tabs/common-settings/page.php:370
 msgid ""
 "Create a page that uses the shortcode <code>[legalweb-"
 "contractwithdrawaldigital]</code>."
@@ -293,7 +309,7 @@ msgstr ""
 "Erstellt eine Seite die den Shortcode <code>[legalweb-"
 "contractwithdrawaldigital]</code> verwendet."
 
-#: admin/tabs/common-settings/page.php:364
+#: admin/tabs/common-settings/page.php:375
 msgid ""
 "Attention: The shortcode <code>[legalweb-contractwithdrawalproduct]</code> "
 "was not found on the page you selected."
@@ -301,15 +317,15 @@ msgstr ""
 "Achtung: Der Shortcode <code>[legalweb-contractwithdrawalproduct]</code> "
 "wurde auf der gewählten Seite nicht gefunden."
 
-#: admin/tabs/common-settings/page.php:421
+#: admin/tabs/common-settings/page.php:432
 msgid "Seal"
 msgstr "legal web Gütesiegel"
 
-#: admin/tabs/common-settings/page.php:427
+#: admin/tabs/common-settings/page.php:438
 msgid "Shortcode to render the legal web seal"
 msgstr "Shortcode zum Anzeigen des \"legal web Siegels\""
 
-#: admin/tabs/common-settings/page.php:429
+#: admin/tabs/common-settings/page.php:440
 msgid ""
 "Place this shortcode anywhere in your content or widgets or footer to show "
 "your visitors that your page has succeeded the check."
@@ -318,11 +334,11 @@ msgstr ""
 "Inhalten, Widgets oder Fußzeilen, um Ihren Besuchern anzuzeigen, dass Ihre "
 "Seite die Prüfung erfolgreich bestanden hat."
 
-#: admin/tabs/common-settings/page.php:438
+#: admin/tabs/common-settings/page.php:449
 msgid "Custom class of the container"
 msgstr "Benutzerdefinierte CSS Klasse des Containers"
 
-#: admin/tabs/common-settings/page.php:440
+#: admin/tabs/common-settings/page.php:451
 msgid ""
 "You can specify custom CSS classes which get set to the outer container of "
 "the seal."
@@ -330,11 +346,11 @@ msgstr ""
 "Sie können benutzerdefinierte CSS-Klassen angeben, die auf den äußeren "
 "Container des Siegels festgelegt werden."
 
-#: admin/tabs/common-settings/page.php:444
+#: admin/tabs/common-settings/page.php:455
 msgid "Custom style of the container"
 msgstr "Benutzerdefinierter Style des Containers"
 
-#: admin/tabs/common-settings/page.php:446
+#: admin/tabs/common-settings/page.php:457
 msgid ""
 "You can specify custom style definition which get set to the outer container "
 "of the seal."
@@ -342,11 +358,11 @@ msgstr ""
 "Sie können benutzerdefinierte Styledefinitionen angeben, die auf den äußeren "
 "Behälter des Siegels festgelegt wird."
 
-#: admin/tabs/common-settings/page.php:450
+#: admin/tabs/common-settings/page.php:461
 msgid "Custom style of the seal image"
 msgstr "Benutzerdefinierte Styles des Bildes/der Grafik"
 
-#: admin/tabs/common-settings/page.php:452
+#: admin/tabs/common-settings/page.php:463
 msgid ""
 "You can specify custom style definition (width, height, ...) which get set "
 "to the image. For instance: width:100px; margin-right: 10px;"
@@ -355,19 +371,19 @@ msgstr ""
 "die auf das Bild festgelegt wird. Zum Beispiel: width: 100px; Rand rechts: "
 "10px;"
 
-#: admin/tabs/common-settings/page.php:471
+#: admin/tabs/common-settings/page.php:482
 msgid "Version"
 msgstr "Version"
 
-#: admin/tabs/common-settings/page.php:476
+#: admin/tabs/common-settings/page.php:487
 msgid "Date of Version"
 msgstr "Datum der Version"
 
-#: admin/tabs/common-settings/page.php:482
+#: admin/tabs/common-settings/page.php:493
 msgid "Last update check"
 msgstr "Letzter Updateversuch"
 
-#: admin/tabs/common-settings/page.php:492
+#: admin/tabs/common-settings/page.php:503
 msgid "Refresh API Data"
 msgstr "Cloud Daten aktualisieren"
 
@@ -425,7 +441,7 @@ msgstr "Cookie Popup"
 
 #: includes/shortcodes/class-legalweb-cloud-imprint-shortcode.php:22
 #: includes/shortcodes/class-legalweb-cloud-imprint-shortcode.php:28
-#: public/class-legalweb-cloud-public.php:99
+#: public/class-legalweb-cloud-public.php:126
 msgid "The imprint for the selected language "
 msgstr "Das Impressum für die gewählte Sprache "
 

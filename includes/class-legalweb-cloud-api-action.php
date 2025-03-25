@@ -65,6 +65,25 @@ class LegalWebCloudApiAction extends LegalWebCloudAjaxAction {
 					LegalWebCloudSettings::set( 'api_data_version', $requestData->lw_api->version );
 					LegalWebCloudSettings::set( 'api_data_guid', $licenceKey );
 
+					if (LegalWebCloudSettings::get('dont_inline_resources') == '1') {
+						$upload_dir = wp_upload_dir();
+						$custom_dir = $upload_dir['basedir'] . '/legalweb-cloud';
+						// Falls das Verzeichnis nicht existiert, erstelle es
+						if (!file_exists($custom_dir)) {
+							wp_mkdir_p($custom_dir);
+						}
+
+						$js_path = $custom_dir . '/legalweb-cloud-client.js';
+						$css_path =$custom_dir . '/legalweb-cloud-client.css';
+
+						$spDsgvoGeneralConfig = "var spDsgvoGeneralConfig = JSON.parse('". json_encode( $requestData->services->dppopupconfig->spDsgvoGeneralConfig) . "');";
+						$spDsgvoIntegrationConfig = "var spDsgvoIntegrationConfig = JSON.parse('". json_encode( $requestData->services->dppopupconfig->spDsgvoIntegrationConfig) . "');";
+						file_put_contents($js_path, $spDsgvoGeneralConfig);
+						file_put_contents($js_path, $spDsgvoIntegrationConfig, FILE_APPEND);
+						file_put_contents($js_path, $requestData->services->dppopupjs, FILE_APPEND);
+						file_put_contents($css_path, $requestData->services->dppopupcss);
+					}
+
 					return $requestData;
 					/*
 				} else

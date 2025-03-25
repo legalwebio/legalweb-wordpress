@@ -10,6 +10,7 @@ Class LegalWebCloudCommonSettingsAction extends LegalWebCloudAjaxAction{
 
 
         $oldLicenseKey =  LegalWebCloudSettings::get( 'license_number' );
+		$olddont_inline_resources =  LegalWebCloudSettings::get( 'dont_inline_resources' );
 
 	    LegalWebCloudSettings::set('license_number', $this->get('license_number', ''));
 	    LegalWebCloudSettings::set('auto_update', $this->get('auto_update', '0'));
@@ -21,6 +22,7 @@ Class LegalWebCloudCommonSettingsAction extends LegalWebCloudAjaxAction{
 	    LegalWebCloudSettings::set('contract_withdrawal_digital_page', $this->get('contract_withdrawal_digital_page', '0'));
 	    LegalWebCloudSettings::set('popup_enabled', $this->get('popup_enabled', '0'));
 	    LegalWebCloudSettings::set('popup_enabled_for_admin', $this->get('popup_enabled_for_admin', '0'));
+	    LegalWebCloudSettings::set('dont_inline_resources', $this->get('dont_inline_resources', '0'));
 
 	    // seal
 	    LegalWebCloudSettings::set('seal-container-css', $this->get('seal-container-css', ''));
@@ -32,6 +34,10 @@ Class LegalWebCloudCommonSettingsAction extends LegalWebCloudAjaxAction{
 		    (new LegalWebCloudApiAction())->refreshApiData();
 	    }
 
+		if ($olddont_inline_resources != LegalWebCloudSettings::get( 'dont_inline_resources' ))
+		{
+			(new LegalWebCloudApiAction())->refreshApiData();
+		}
         $this->returnBack();
     }
 }

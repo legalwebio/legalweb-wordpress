@@ -16,8 +16,14 @@ class LegalWebCloudPublic
      */
     public function enqueue_styles()
     {
-        // at the momoment we dont need a css
+
         //wp_enqueue_style(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'css/legalweb-cloud-public.css', array(), legalweb_cloud_VERSION, 'all');
+	    if (LegalWebCloudSettings::get( 'dont_inline_resources' ) == '1') {
+		    $upload_dir = wp_upload_dir();
+		    $custom_dir = $upload_dir['baseurl'] . '/legalweb-cloud';
+		    $file_path = $custom_dir. '/legalweb-cloud-client.css';
+		    wp_enqueue_style(legalweb_cloud_NAME, $file_path, array(), LegalWebCloudSettings::get( 'api_data_version'), 'all');
+	    }
     }
 
     /**
@@ -27,12 +33,18 @@ class LegalWebCloudPublic
      */
     public function enqueue_scripts()
     {
-	    // at the momoment we dont need a js
-	    if ($this->lwCheckIfWpConsentApiIsActive()) {
-		    wp_enqueue_script(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'js/legalweb-cloud-public.min.js', array(
-			    'jquery'
-		    ), legalweb_cloud_VERSION, false);
+
+        if (LegalWebCloudSettings::get( 'dont_inline_resources' ) == '1') {
+	        $upload_dir = wp_upload_dir();
+	        $custom_dir = $upload_dir['baseurl'] . '/legalweb-cloud';
+	        $file_path = $custom_dir. '/legalweb-cloud-client.js';
+	        wp_enqueue_script('legalweb-cloud-client', $file_path, array(), LegalWebCloudSettings::get( 'api_data_version'), false);
         }
+
+	    if ($this->lwCheckIfWpConsentApiIsActive()) {
+		    wp_enqueue_script(legalweb_cloud_NAME, plugin_dir_url(__FILE__) . 'js/legalweb-cloud-public.min.js', array('legalweb-cloud-client'), legalweb_cloud_VERSION, false);
+	    }
+
     }
 
 	public function writeHeaderScripts()
@@ -41,7 +53,10 @@ class LegalWebCloudPublic
 	    if ( LegalWebCloudSettings::get( 'popup_enabled_for_admin' ) != '1' && legalweb_disable_on_backend()) return;
 	    if(apply_filters('legalweb_disable_header_scripts', false)) return;
 
+	    if ( LegalWebCloudSettings::get( 'dont_inline_resources' ) == '1') return;
+
 	    $apiData = (new LegalWebCloudApiAction())->getOrLoadApiData();
+
 
         // write popup scripts
 		if ( $apiData != null &&
@@ -82,7 +97,8 @@ class LegalWebCloudPublic
 		    echo '<!--noptimize-->';
 
 			// write popup styles
-			if ( $apiData != null &&
+			if ( LegalWebCloudSettings::get( 'dont_inline_resources' ) != '1'
+                 && $apiData != null &&
 			     isset($apiData->services) &&
 			     isset($apiData->services->dppopupcss)) {
 

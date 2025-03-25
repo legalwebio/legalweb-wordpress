@@ -53,6 +53,12 @@ $hasSeal                      = $apiData != null && isset($apiData->services) &&
 		            '',
 		            __( 'Enables the popup for backend user.', 'legalweb-cloud' ) );
 	            ?>
+	            <?php
+	            legalwebWriteInput( 'switch', '', 'dont_inline_resources', LegalWebCloudSettings::get( 'dont_inline_resources' ),
+		            __( 'Load JS and CSS as resources', 'legalweb-cloud' ),
+		            '',
+		            __( 'Instead of writing them inline they will be loaded as file resources', 'legalweb-cloud' ) );
+	            ?>
                 <div class="form-group d-flex mb-2">
                     <input type="submit" class="btn btn-primary ml-auto"
                            value="<?= _e( 'Save changes', 'legalweb-cloud' ); ?>"/>
